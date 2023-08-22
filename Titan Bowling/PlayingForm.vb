@@ -278,6 +278,8 @@ Public Class PlayingForm
                 'Go through everything, skip onto next team/frame if the FrameScore(1) is equal to -1 (-1 is default value)
 
                 'Display a spare as a /, 0 pins as -, strike as X and if nothing was bowled yet (FrameScore(1) = -1) then make label text empty
+
+                'SINCE THIS IS RUN IN A SEPARATE THREAD, YOU CANNOT DIRECTLY ACCESS CONTROLS! USE INVOKE LIKE I DID IN GetIntegerInput()
                 For i As Integer = 0 To Team.Scores.Length - 1
                     Dim Frame As Integer() = Team.Scores(i)
                     Debug.Write(String.Format("Frame: {0}", i))
