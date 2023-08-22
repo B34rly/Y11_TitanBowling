@@ -186,6 +186,10 @@ Partial Class PlayingForm
         Me.Team2Label = New System.Windows.Forms.Label()
         Me.Team4Label = New System.Windows.Forms.Label()
         Me.Team3Label = New System.Windows.Forms.Label()
+        Me.Label135 = New System.Windows.Forms.Label()
+        Me.TurnLabel = New System.Windows.Forms.Label()
+        Me.EnterScore = New System.Windows.Forms.Button()
+        Me.PinsInput = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -2163,12 +2167,69 @@ Partial Class PlayingForm
         Me.Team3Label.TabIndex = 180
         Me.Team3Label.Text = "Player A, Player B, Player C, Player D"
         '
+        'Label135
+        '
+        Me.Label135.AutoSize = True
+        Me.Label135.Location = New System.Drawing.Point(259, 670)
+        Me.Label135.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label135.Name = "Label135"
+        Me.Label135.Size = New System.Drawing.Size(0, 20)
+        Me.Label135.TabIndex = 182
+        '
+        'TurnLabel
+        '
+        Me.TurnLabel.AutoSize = True
+        Me.TurnLabel.BackColor = System.Drawing.Color.Transparent
+        Me.TurnLabel.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.TurnLabel.ForeColor = System.Drawing.Color.White
+        Me.TurnLabel.Location = New System.Drawing.Point(280, 647)
+        Me.TurnLabel.Name = "TurnLabel"
+        Me.TurnLabel.Size = New System.Drawing.Size(272, 19)
+        Me.TurnLabel.TabIndex = 183
+        Me.TurnLabel.Text = "It is currently Player A of Team 1's turn!"
+        '
+        'EnterScore
+        '
+        Me.EnterScore.BackColor = System.Drawing.Color.Transparent
+        Me.EnterScore.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Button_Background
+        Me.EnterScore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.EnterScore.FlatAppearance.BorderSize = 0
+        Me.EnterScore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.EnterScore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.EnterScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.EnterScore.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.EnterScore.Location = New System.Drawing.Point(566, 712)
+        Me.EnterScore.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.EnterScore.Name = "EnterScore"
+        Me.EnterScore.Size = New System.Drawing.Size(115, 41)
+        Me.EnterScore.TabIndex = 184
+        Me.EnterScore.Text = "Enter"
+        Me.EnterScore.UseVisualStyleBackColor = False
+        '
+        'PinsInput
+        '
+        Me.PinsInput.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PinsInput.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.PinsInput.Location = New System.Drawing.Point(376, 712)
+        Me.PinsInput.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PinsInput.Name = "PinsInput"
+        Me.PinsInput.PlaceholderText = "Enter Score"
+        Me.PinsInput.Size = New System.Drawing.Size(170, 41)
+        Me.PinsInput.TabIndex = 185
+        Me.PinsInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'PlayingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1079, 668)
+        Me.ClientSize = New System.Drawing.Size(1079, 802)
+        Me.Controls.Add(Me.PinsInput)
+        Me.Controls.Add(Me.EnterScore)
+        Me.Controls.Add(Me.TurnLabel)
+        Me.Controls.Add(Me.Label135)
         Me.Controls.Add(Me.Team4Label)
         Me.Controls.Add(Me.Team3Label)
         Me.Controls.Add(Me.Team2Label)
@@ -2508,4 +2569,8 @@ Partial Class PlayingForm
     Friend WithEvents Team2Label As Label
     Friend WithEvents Team4Label As Label
     Friend WithEvents Team3Label As Label
+    Friend WithEvents Label135 As Label
+    Friend WithEvents TurnLabel As Label
+    Friend WithEvents EnterScore As Button
+    Friend WithEvents PinsInput As TextBox
 End Class
