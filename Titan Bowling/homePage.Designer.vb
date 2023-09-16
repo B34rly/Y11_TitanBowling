@@ -188,7 +188,7 @@ Partial Class homePage
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(1, 32, 76)
+        BackColor = Color.FromArgb(CByte(1), CByte(32), CByte(76))
         ClientSize = New Size(944, 501)
         Controls.Add(SUPPORT)
         Controls.Add(TUTORIAL)

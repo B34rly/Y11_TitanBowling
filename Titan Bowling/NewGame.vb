@@ -123,7 +123,65 @@
     End Sub
 
     Private Sub EnterGame_Click(sender As Object, e As EventArgs) Handles EnterGame.Click
-        PlayingForm.Show()
-        Me.Hide()
+        If team1MemberCount > 0 Or team2MemberCount > 0 Or team3MemberCount > 0 Or team4MemberCount > 0 Then
+
+            Dim save = SavingSystem.Load(SavingSystem.CurrentActiveSave)
+
+            save.aA = Team1Names
+            save.bA = Team1Names
+            save.cA = Team1Names
+            save.dA = Team1Names
+
+
+            If team1MemberCount > 0 Then
+                save.a = Team1Names(0)
+            End If
+
+            If team2MemberCount > 0 Then
+                save.b = Team2Names(0)
+            End If
+
+            If team3MemberCount > 0 Then
+                save.c = Team3Names(0)
+            End If
+
+            If team4MemberCount > 0 Then
+                save.d = Team4Names(0)
+            End If
+
+
+            SavingSystem.Save(save, SavingSystem.CurrentActiveSave)
+
+            PlayingForm.Show()
+            Me.Hide()
+        End If
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Team1Names = {"", "", "", ""}
+        team1MemberCount = 0
+        team1.Text = ""
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Team2Names = {"", "", "", ""}
+        team2MemberCount = 0
+        team2.Text = ""
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Team3Names = {"", "", "", ""}
+        team3MemberCount = 0
+        team3.Text = ""
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Team4Names = {"", "", "", ""}
+        team4MemberCount = 0
+        team4.Text = ""
+
     End Sub
 End Class
