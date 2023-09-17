@@ -22,128 +22,121 @@ Partial Class SettingsForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Title = New System.Windows.Forms.Label()
-        Me.Shape = New System.Windows.Forms.PictureBox()
-        Me.ColorTheme = New System.Windows.Forms.Button()
-        Me.Volume = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.HomeButton = New System.Windows.Forms.Button()
-        CType(Me.Shape, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'Title
-        '
-        Me.Title.AutoSize = True
-        Me.Title.BackColor = System.Drawing.Color.Transparent
-        Me.Title.Font = New System.Drawing.Font("Segoe UI", 55.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Title.ForeColor = System.Drawing.Color.White
-        Me.Title.Location = New System.Drawing.Point(72, 241)
-        Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(483, 123)
-        Me.Title.TabIndex = 1
-        Me.Title.Text = "SETTINGS"
-        '
-        'Shape
-        '
-        Me.Shape.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.square_shape
-        Me.Shape.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Shape.Location = New System.Drawing.Point(-427, 152)
-        Me.Shape.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Shape.Name = "Shape"
-        Me.Shape.Size = New System.Drawing.Size(975, 323)
-        Me.Shape.TabIndex = 2
-        Me.Shape.TabStop = False
-        '
-        'ColorTheme
-        '
-        Me.ColorTheme.BackColor = System.Drawing.Color.Transparent
-        Me.ColorTheme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ColorTheme.FlatAppearance.BorderSize = 0
-        Me.ColorTheme.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.ColorTheme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.ColorTheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ColorTheme.Font = New System.Drawing.Font("Segoe UI", 19.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ColorTheme.ForeColor = System.Drawing.Color.White
-        Me.ColorTheme.Location = New System.Drawing.Point(605, 192)
-        Me.ColorTheme.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ColorTheme.Name = "ColorTheme"
-        Me.ColorTheme.Size = New System.Drawing.Size(255, 80)
-        Me.ColorTheme.TabIndex = 3
-        Me.ColorTheme.Text = "THEMES"
-        Me.ColorTheme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ColorTheme.UseVisualStyleBackColor = False
-        '
-        'Volume
-        '
-        Me.Volume.BackColor = System.Drawing.Color.Transparent
-        Me.Volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Volume.FlatAppearance.BorderSize = 0
-        Me.Volume.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Volume.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Volume.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Volume.Font = New System.Drawing.Font("Segoe UI", 19.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Volume.ForeColor = System.Drawing.Color.White
-        Me.Volume.Location = New System.Drawing.Point(605, 280)
-        Me.Volume.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Volume.Name = "Volume"
-        Me.Volume.Size = New System.Drawing.Size(126, 80)
-        Me.Volume.TabIndex = 4
-        Me.Volume.Text = "MUTE"
-        Me.Volume.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Volume.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 19.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(605, 368)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(255, 80)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "DELETE SAVES"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'HomeButton
-        '
-        Me.HomeButton.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.home
-        Me.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.HomeButton.FlatAppearance.BorderSize = 0
-        Me.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HomeButton.Location = New System.Drawing.Point(12, 13)
-        Me.HomeButton.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.HomeButton.Name = "HomeButton"
-        Me.HomeButton.Size = New System.Drawing.Size(40, 53)
-        Me.HomeButton.TabIndex = 22
-        Me.HomeButton.UseVisualStyleBackColor = True
-        '
-        'SettingsForm
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1079, 668)
-        Me.Controls.Add(Me.HomeButton)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Volume)
-        Me.Controls.Add(Me.ColorTheme)
-        Me.Controls.Add(Me.Title)
-        Me.Controls.Add(Me.Shape)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "SettingsForm"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Settings"
-        CType(Me.Shape, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Title = New Label()
+        Shape = New PictureBox()
+        ColorTheme = New Button()
+        Volume = New Button()
+        Button2 = New Button()
+        HomeButton = New Button()
+        CType(Shape, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' Title
+        ' 
+        Title.AutoSize = True
+        Title.BackColor = Color.Transparent
+        Title.Font = New Font("Segoe UI", 55F, FontStyle.Bold, GraphicsUnit.Point)
+        Title.ForeColor = Color.White
+        Title.Location = New Point(63, 181)
+        Title.Name = "Title"
+        Title.Size = New Size(385, 99)
+        Title.TabIndex = 1
+        Title.Text = "SETTINGS"
+        ' 
+        ' Shape
+        ' 
+        Shape.BackgroundImage = My.Resources.Resources.square_shape
+        Shape.BackgroundImageLayout = ImageLayout.Zoom
+        Shape.Location = New Point(-374, 114)
+        Shape.Name = "Shape"
+        Shape.Size = New Size(853, 242)
+        Shape.TabIndex = 2
+        Shape.TabStop = False
+        ' 
+        ' ColorTheme
+        ' 
+        ColorTheme.BackColor = Color.Transparent
+        ColorTheme.BackgroundImageLayout = ImageLayout.Zoom
+        ColorTheme.FlatAppearance.BorderSize = 0
+        ColorTheme.FlatAppearance.MouseDownBackColor = Color.Transparent
+        ColorTheme.FlatAppearance.MouseOverBackColor = Color.Transparent
+        ColorTheme.FlatStyle = FlatStyle.Flat
+        ColorTheme.Font = New Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point)
+        ColorTheme.ForeColor = Color.White
+        ColorTheme.Location = New Point(529, 144)
+        ColorTheme.Name = "ColorTheme"
+        ColorTheme.Size = New Size(223, 60)
+        ColorTheme.TabIndex = 3
+        ColorTheme.Text = "BLUE"
+        ColorTheme.TextAlign = ContentAlignment.MiddleLeft
+        ColorTheme.UseVisualStyleBackColor = False
+        ' 
+        ' Volume
+        ' 
+        Volume.BackColor = Color.Transparent
+        Volume.BackgroundImageLayout = ImageLayout.Zoom
+        Volume.FlatAppearance.BorderSize = 0
+        Volume.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Volume.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Volume.FlatStyle = FlatStyle.Flat
+        Volume.Font = New Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point)
+        Volume.ForeColor = Color.White
+        Volume.Location = New Point(529, 210)
+        Volume.Name = "Volume"
+        Volume.Size = New Size(223, 60)
+        Volume.TabIndex = 4
+        Volume.Text = "MUTE"
+        Volume.TextAlign = ContentAlignment.MiddleLeft
+        Volume.UseVisualStyleBackColor = False
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.Transparent
+        Button2.BackgroundImageLayout = ImageLayout.Zoom
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Button2.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point)
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(529, 276)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(223, 60)
+        Button2.TabIndex = 5
+        Button2.Text = "DELETE SAVES"
+        Button2.TextAlign = ContentAlignment.MiddleLeft
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' HomeButton
+        ' 
+        HomeButton.BackgroundImage = My.Resources.Resources.home
+        HomeButton.BackgroundImageLayout = ImageLayout.Zoom
+        HomeButton.FlatAppearance.BorderSize = 0
+        HomeButton.FlatStyle = FlatStyle.Flat
+        HomeButton.Location = New Point(10, 10)
+        HomeButton.Name = "HomeButton"
+        HomeButton.Size = New Size(35, 40)
+        HomeButton.TabIndex = 22
+        HomeButton.UseVisualStyleBackColor = True
+        ' 
+        ' SettingsForm
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(1), CByte(32), CByte(76))
+        ClientSize = New Size(944, 501)
+        Controls.Add(HomeButton)
+        Controls.Add(Button2)
+        Controls.Add(Volume)
+        Controls.Add(ColorTheme)
+        Controls.Add(Title)
+        Controls.Add(Shape)
+        Name = "SettingsForm"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Settings"
+        CType(Shape, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Title As Label

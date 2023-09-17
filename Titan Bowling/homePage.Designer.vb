@@ -181,7 +181,7 @@ Partial Class homePage
         SUPPORT.Name = "SUPPORT"
         SUPPORT.Size = New Size(156, 60)
         SUPPORT.TabIndex = 10
-        SUPPORT.Text = "SUPPORT/CREDITS"
+        SUPPORT.Text = "SUPPORT"
         SUPPORT.UseVisualStyleBackColor = False
         ' 
         ' homePage

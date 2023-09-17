@@ -22,10 +22,12 @@ Partial Class TutorialForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(TutorialForm))
         Shape = New PictureBox()
         PictureBox3 = New PictureBox()
         Title = New Label()
         HomeButton = New Button()
+        Label1 = New Label()
         CType(Shape, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -59,7 +61,7 @@ Partial Class TutorialForm
         Title.BackColor = Color.Transparent
         Title.Font = New Font("Segoe UI", 55F, FontStyle.Bold, GraphicsUnit.Point)
         Title.ForeColor = Color.White
-        Title.Location = New Point(188, 27)
+        Title.Location = New Point(175, 61)
         Title.Name = "Title"
         Title.Size = New Size(396, 99)
         Title.TabIndex = 17
@@ -77,12 +79,24 @@ Partial Class TutorialForm
         HomeButton.TabIndex = 20
         HomeButton.UseVisualStyleBackColor = True
         ' 
+        ' Label1
+        ' 
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.White
+        Label1.Location = New Point(188, 171)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(574, 276)
+        Label1.TabIndex = 21
+        Label1.Text = resources.GetString("Label1.Text")
+        ' 
         ' TutorialForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(1), CByte(32), CByte(76))
         ClientSize = New Size(944, 501)
+        Controls.Add(Label1)
         Controls.Add(HomeButton)
         Controls.Add(Shape)
         Controls.Add(PictureBox3)
@@ -100,4 +114,5 @@ Partial Class TutorialForm
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Title As Label
     Friend WithEvents HomeButton As Button
+    Friend WithEvents Label1 As Label
 End Class

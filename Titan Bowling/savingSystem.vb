@@ -4,6 +4,7 @@ Imports Titan_Bowling.PlayingForm
 Public Class SavingSystem
 
     Public Shared CurrentActiveSave As String = "1"
+    Public Shared theme As Color = Color.FromArgb(1, 32, 76)
 
     Shared Function Save(s As SaveFile, n As String)
         FileOpen(1, CustomFileSystem.ProjectDirectory + n + ".save", OpenMode.Binary)
