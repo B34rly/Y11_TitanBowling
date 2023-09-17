@@ -243,25 +243,7 @@ Public Class PlayingForm
             End If
         End While
     End Function
-    'Private Function GetIntegerInput(Message As String, title As String, MaxValue As Integer) As Integer
-    '    Dim Valid As Boolean = False
-    '    Dim IntegerInput As Integer
-    '    While Valid = False
-    '        Dim Input = InputBox(Message, title, "")
-    '        If IsNumeric(Input) Then
-    '            If Integer.TryParse(Input, IntegerInput) <> False Then
-    '                If (IntegerInput >= 0 AndAlso IntegerInput <= MaxValue) Then
-    '                    Return IntegerInput
-    '                    Valid = True
-    '                Else
-    '                    MsgBox(String.Format("Number must be between 0 and {0}!", MaxValue.ToString))
-    '                End If
-    '            End If
-    '        Else
-    '            MsgBox("You must input numberic characters only!")
-    '        End If
-    '    End While
-    'End Function
+
     Private Sub EnterScore_Click(sender As Object, e As EventArgs) Handles EnterScore.Click
         AcceptInput = True
         'Anything else requires a major rewrite. 
@@ -299,37 +281,63 @@ Public Class PlayingForm
                 Debug.WriteLine(PinsDowned.ToString)
 
                 FrameScore(1) = PinsDowned
+                Dim currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "L"))
+                currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(FrameScore(1)))
+
                 If PinsDowned = 10 Then
                     ' strike
-                    If CurrentFrame = (Game.Frames - 1) Then
+                    currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = "")
+
+                    If CurrentFrame = (Game.Frames - 1) Then 'strike in the last frame
+                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = "X")
+
                         PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a strike in the last frame, they get 2 more bonus rolls! How many pins did they knock over in the first roll? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), 10)
                         FrameScore(2) = PinsDowned
+
+                        currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "R"))
+                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(If(FrameScore(2) = 10, "X", FrameScore(2))))
 
                         Dim PinsLeft As Integer = If(PinsDowned = 10, 10, 10 - PinsDowned)
 
                         PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a strike in the last frame, they get 2 more bonus rolls! How many pins did they knock over in the second roll? (Must be a number from 0 to {1}.)", CurrentPlayer, PinsLeft), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), PinsLeft.ToString)
 
                         FrameScore(3) = PinsDowned
-                    Else
+                        currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "D"))
+                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(If(FrameScore(3) = 10, "X", FrameScore(3))))
+                    Else 'Strike in any frame not the last
                         FrameScore(2) = -1
+                        currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "R"))
+                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = "X")
                     End If
                 Else
                     Dim PinsLeft As Integer = If(10 - PinsDowned = 0, 10, 10 - PinsDowned)
 
                     PinsDowned = Await GetIntegerInput(String.Format("For a chance to spare, {0} can bowl a second time! How many pins did they knock over in the second roll? (Must be a number from 0 to {1}.)", CurrentPlayer, PinsLeft.ToString), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), PinsLeft)
                     FrameScore(2) = PinsDowned
-                    'change max values in text where applicable
+                    currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "R"))
+                    currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(FrameScore(2)))
 
                     If FrameScore(1) + FrameScore(2) = 10 Then
                         MsgBox(String.Format("Congratulations on the spare, {0}!", CurrentPlayer), 1, "Spare!")
+                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = "/")
+
                         If CurrentFrame = (Game.Frames - 1) Then
                             PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a spare in the last frame, they get 1 bonus roll! How many pins did they knock over in this roll? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), 10)
                             FrameScore(3) = PinsDowned
+
+                            currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "D"))
+                            currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(If(FrameScore(3) = 10, "X", FrameScore(3))))
                         End If
                     End If
                 End If
 
                 Team.CalculateScore()
+
+                currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, ""))
+                currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(Team.Scores(CurrentFrame)(0)))
+
+                currentFrameLabel = Me.Controls(String.Format("Team{0}Total", CurrentTeam + 1))
+                currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(Team.Scores(CurrentFrame)(0)))
                 'to display scores it'd be a pain in the neck if our labels aren't ordered/sorted.
                 'it's easiest if they're stored in an array, but if they have a naming scheme too that'll work
                 'i saw u started with one then gave up because there were hundreds of labels lol
