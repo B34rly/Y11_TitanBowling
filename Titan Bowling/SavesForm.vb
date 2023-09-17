@@ -2,7 +2,7 @@
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
 
         homePage.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub SavesForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -12,11 +12,36 @@
         Dim save3 = SavingSystem.Load("3")
         Dim save4 = SavingSystem.Load("4")
 
+        Button1.Text = "Save 1 : "
+        Button2.Text = "Save 2 : "
+        Button3.Text = "Save 3 : "
+        Button4.Text = "Save 4 : "
 
-        Button1.Text = "Save 1 : " + save1.a + ", " + save1.b + ", " + save1.c + ", " + save1.d + " : " + save1.progress.ToString() + "/12"
-        Button2.Text = "Save 2 : " + save2.a + ", " + save2.b + ", " + save2.c + ", " + save2.d + " : " + save2.progress.ToString() + "/12"
-        Button3.Text = "Save 3 : " + save3.a + ", " + save3.b + ", " + save3.c + ", " + save3.d + " : " + save3.progress.ToString() + "/12"
-        Button4.Text = "Save 4 : " + save4.a + ", " + save4.b + ", " + save4.c + ", " + save4.d + " : " + save4.progress.ToString() + "/12"
+        For i = 0 To 3
+            Button1.Text += save1.a(i) + " "
+            Button1.Text += save1.b(i) + " "
+            Button1.Text += save1.c(i) + " "
+            Button1.Text += save1.d(i) + " "
+
+
+            Button2.Text += save2.a(i) + " "
+            Button2.Text += save2.b(i) + " "
+            Button2.Text += save2.c(i) + " "
+            Button2.Text += save2.d(i) + " "
+
+
+            Button3.Text += save3.a(i) + " "
+            Button3.Text += save3.b(i) + " "
+            Button3.Text += save3.c(i) + " "
+            Button3.Text += save3.d(i) + " "
+
+
+            Button4.Text += save4.a(i) + " "
+            Button4.Text += save4.b(i) + " "
+            Button4.Text += save4.c(i) + " "
+            Button4.Text += save4.d(i) + " "
+
+        Next
 
     End Sub
 

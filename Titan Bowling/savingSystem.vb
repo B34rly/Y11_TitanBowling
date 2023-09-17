@@ -29,12 +29,10 @@ End Class
 
 <Serializable>
 Public Structure SaveFile
-    Public a, b, c, d As String
-
-    Public aA, bA, cA, dA As String()
-
-    Public progress As Integer
-    Public Function isSetup()
-        Return aA.Length > 0 Or bA.Length > 0 Or cA.Length > 0 Or dA.Length > 0
-    End Function
+    Public initialized As Boolean
+    Public filled As Boolean
+    Public a As String()
+    Public b As String()
+    Public c As String()
+    Public d As String()
 End Structure

@@ -27,7 +27,7 @@
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
 
         homePage.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Volume_Click(sender As Object, e As EventArgs) Handles Volume.Click

@@ -127,28 +127,11 @@
 
             Dim save = SavingSystem.Load(SavingSystem.CurrentActiveSave)
 
-            save.aA = Team1Names
-            save.bA = Team1Names
-            save.cA = Team1Names
-            save.dA = Team1Names
-
-
-            If team1MemberCount > 0 Then
-                save.a = Team1Names(0)
-            End If
-
-            If team2MemberCount > 0 Then
-                save.b = Team2Names(0)
-            End If
-
-            If team3MemberCount > 0 Then
-                save.c = Team3Names(0)
-            End If
-
-            If team4MemberCount > 0 Then
-                save.d = Team4Names(0)
-            End If
-
+            save.a = Team1Names
+            save.b = Team2Names
+            save.c = Team3Names
+            save.d = Team4Names
+            save.filled = True
 
             SavingSystem.Save(save, SavingSystem.CurrentActiveSave)
 
