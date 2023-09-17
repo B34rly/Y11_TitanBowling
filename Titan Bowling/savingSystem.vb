@@ -11,6 +11,26 @@ Public Class SavingSystem
         FilePut(1, s)
         FileClose(1)
     End Function
+
+    Shared Function Init(n As String)
+        Dim save = SavingSystem.Load(n)
+
+        If save.initialized = False Then
+            save.initialized = True
+            save.a = {"", "", "", ""}
+            save.b = {"", "", "", ""}
+            save.c = {"", "", "", ""}
+            save.d = {"", "", "", ""}
+
+            save.ascores = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+            save.bscores = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+            save.cscores = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+            save.dscores = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+        End If
+
+        SavingSystem.Save(save, n)
+
+    End Function
     Shared Function Load(n As String) As SaveFile
         Dim s As SaveFile = New SaveFile()
         If My.Computer.FileSystem.FileExists(CustomFileSystem.ProjectDirectory + n + ".save") Then
@@ -35,4 +55,9 @@ Public Structure SaveFile
     Public b As String()
     Public c As String()
     Public d As String()
+
+    Public ascores As Integer()
+    Public bscores As Integer()
+    Public cscores As Integer()
+    Public dscores As Integer()
 End Structure

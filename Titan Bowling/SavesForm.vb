@@ -64,4 +64,32 @@
         SavingSystem.CurrentActiveSave = "4"
         MessageBox.Show("Save 4 Selected")
     End Sub
+
+    Private Sub Delete1_Click(sender As Object, e As EventArgs) Handles Delete1.Click
+        If MsgBox("Are you sure you want to delete save 1?", MsgBoxStyle.YesNo, "Delete Save 1?") = 6 Then
+            SavingSystem.DeleteFile("1")
+            SavingSystem.Init("1")
+        End If
+    End Sub
+
+    Private Sub Delete2_Click(sender As Object, e As EventArgs) Handles Delete2.Click
+        If MsgBox("Are you sure you want to delete save 2?", MsgBoxStyle.YesNo, "Delete Save 2?") = 6 Then
+            SavingSystem.DeleteFile("2")
+            SavingSystem.Init("2")
+        End If
+    End Sub
+
+    Private Sub Delete3_Click(sender As Object, e As EventArgs) Handles Delete3.Click
+        If MsgBox("Are you sure you want to delete save 3?", MsgBoxStyle.YesNo, "Delete Save 3?") = 6 Then
+            SavingSystem.DeleteFile("3")
+            SavingSystem.Init("3")
+        End If
+    End Sub
+
+    Private Sub Delete4_Click(sender As Object, e As EventArgs) Handles Delete4.Click
+        If MsgBox("Are you sure you want to delete save 4?", MsgBoxStyle.YesNo, "Delete Save 4?") = 6 Then
+            SavingSystem.DeleteFile("4")
+            SavingSystem.Init("4")
+        End If
+    End Sub
 End Class

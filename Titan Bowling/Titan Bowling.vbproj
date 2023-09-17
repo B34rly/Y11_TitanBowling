@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>Titan_Bowling</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>Titan_Bowling.homePage</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>

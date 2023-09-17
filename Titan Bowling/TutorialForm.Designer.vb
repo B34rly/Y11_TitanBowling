@@ -22,92 +22,97 @@ Partial Class TutorialForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(TutorialForm))
-        Shape = New PictureBox()
-        PictureBox3 = New PictureBox()
-        Title = New Label()
-        HomeButton = New Button()
-        Label1 = New Label()
-        CType(Shape, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' Shape
-        ' 
-        Shape.BackgroundImage = My.Resources.Resources.square_shape
-        Shape.BackgroundImageLayout = ImageLayout.Zoom
-        Shape.Location = New Point(806, 337)
-        Shape.Name = "Shape"
-        Shape.Size = New Size(220, 242)
-        Shape.TabIndex = 19
-        Shape.TabStop = False
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackColor = Color.Transparent
-        PictureBox3.BackgroundImage = My.Resources.Resources.Shape_3
-        PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox3.ErrorImage = Nothing
-        PictureBox3.InitialImage = Nothing
-        PictureBox3.Location = New Point(-142, -92)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(311, 252)
-        PictureBox3.TabIndex = 18
-        PictureBox3.TabStop = False
-        ' 
-        ' Title
-        ' 
-        Title.AutoSize = True
-        Title.BackColor = Color.Transparent
-        Title.Font = New Font("Segoe UI", 55F, FontStyle.Bold, GraphicsUnit.Point)
-        Title.ForeColor = Color.White
-        Title.Location = New Point(175, 61)
-        Title.Name = "Title"
-        Title.Size = New Size(396, 99)
-        Title.TabIndex = 17
-        Title.Text = "TUTORIAL"
-        ' 
-        ' HomeButton
-        ' 
-        HomeButton.BackgroundImage = My.Resources.Resources.home
-        HomeButton.BackgroundImageLayout = ImageLayout.Zoom
-        HomeButton.FlatAppearance.BorderSize = 0
-        HomeButton.FlatStyle = FlatStyle.Flat
-        HomeButton.Location = New Point(897, 12)
-        HomeButton.Name = "HomeButton"
-        HomeButton.Size = New Size(35, 40)
-        HomeButton.TabIndex = 20
-        HomeButton.UseVisualStyleBackColor = True
-        ' 
-        ' Label1
-        ' 
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(188, 171)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(574, 276)
-        Label1.TabIndex = 21
-        Label1.Text = resources.GetString("Label1.Text")
-        ' 
-        ' TutorialForm
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(1), CByte(32), CByte(76))
-        ClientSize = New Size(944, 501)
-        Controls.Add(Label1)
-        Controls.Add(HomeButton)
-        Controls.Add(Shape)
-        Controls.Add(PictureBox3)
-        Controls.Add(Title)
-        Name = "TutorialForm"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "TutorialForm"
-        CType(Shape, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TutorialForm))
+        Me.Shape = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Title = New System.Windows.Forms.Label()
+        Me.HomeButton = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        CType(Me.Shape, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Shape
+        '
+        Me.Shape.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.square_shape
+        Me.Shape.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Shape.Location = New System.Drawing.Point(-51, 432)
+        Me.Shape.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Shape.Name = "Shape"
+        Me.Shape.Size = New System.Drawing.Size(251, 323)
+        Me.Shape.TabIndex = 19
+        Me.Shape.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Shape_3
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox3.ErrorImage = Nothing
+        Me.PictureBox3.InitialImage = Nothing
+        Me.PictureBox3.Location = New System.Drawing.Point(817, -37)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(355, 336)
+        Me.PictureBox3.TabIndex = 18
+        Me.PictureBox3.TabStop = False
+        '
+        'Title
+        '
+        Me.Title.AutoSize = True
+        Me.Title.BackColor = System.Drawing.Color.Transparent
+        Me.Title.Font = New System.Drawing.Font("Segoe UI", 55.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Title.ForeColor = System.Drawing.Color.White
+        Me.Title.Location = New System.Drawing.Point(200, 81)
+        Me.Title.Name = "Title"
+        Me.Title.Size = New System.Drawing.Size(495, 123)
+        Me.Title.TabIndex = 17
+        Me.Title.Text = "TUTORIAL"
+        '
+        'HomeButton
+        '
+        Me.HomeButton.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.home
+        Me.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.HomeButton.FlatAppearance.BorderSize = 0
+        Me.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HomeButton.Location = New System.Drawing.Point(31, 25)
+        Me.HomeButton.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.HomeButton.Name = "HomeButton"
+        Me.HomeButton.Size = New System.Drawing.Size(40, 53)
+        Me.HomeButton.TabIndex = 20
+        Me.HomeButton.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(215, 228)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(656, 368)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = resources.GetString("Label1.Text")
+        '
+        'TutorialForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1079, 668)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.HomeButton)
+        Me.Controls.Add(Me.Shape)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.Title)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Name = "TutorialForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "TutorialForm"
+        CType(Me.Shape, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Shape As PictureBox

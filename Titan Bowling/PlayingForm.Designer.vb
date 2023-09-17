@@ -258,7 +258,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame1.BackColor = System.Drawing.Color.White
         Me.Team1Frame1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame1.Location = New System.Drawing.Point(231, 169)
         Me.Team1Frame1.Name = "Team1Frame1"
         Me.Team1Frame1.Size = New System.Drawing.Size(51, 60)
@@ -318,7 +318,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame2.BackColor = System.Drawing.Color.White
         Me.Team1Frame2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame2.Location = New System.Drawing.Point(289, 169)
         Me.Team1Frame2.Name = "Team1Frame2"
         Me.Team1Frame2.Size = New System.Drawing.Size(51, 60)
@@ -354,7 +354,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame4.BackColor = System.Drawing.Color.White
         Me.Team1Frame4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame4.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame4.Location = New System.Drawing.Point(406, 169)
         Me.Team1Frame4.Name = "Team1Frame4"
         Me.Team1Frame4.Size = New System.Drawing.Size(51, 60)
@@ -390,7 +390,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame3.BackColor = System.Drawing.Color.White
         Me.Team1Frame3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame3.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame3.Location = New System.Drawing.Point(347, 169)
         Me.Team1Frame3.Name = "Team1Frame3"
         Me.Team1Frame3.Size = New System.Drawing.Size(51, 60)
@@ -426,7 +426,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame8.BackColor = System.Drawing.Color.White
         Me.Team1Frame8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame8.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame8.Location = New System.Drawing.Point(639, 169)
         Me.Team1Frame8.Name = "Team1Frame8"
         Me.Team1Frame8.Size = New System.Drawing.Size(51, 60)
@@ -462,7 +462,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame7.BackColor = System.Drawing.Color.White
         Me.Team1Frame7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame7.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame7.Location = New System.Drawing.Point(581, 169)
         Me.Team1Frame7.Name = "Team1Frame7"
         Me.Team1Frame7.Size = New System.Drawing.Size(51, 60)
@@ -498,7 +498,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame6.BackColor = System.Drawing.Color.White
         Me.Team1Frame6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame6.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame6.Location = New System.Drawing.Point(522, 169)
         Me.Team1Frame6.Name = "Team1Frame6"
         Me.Team1Frame6.Size = New System.Drawing.Size(51, 60)
@@ -534,7 +534,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame5.BackColor = System.Drawing.Color.White
         Me.Team1Frame5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame5.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame5.Location = New System.Drawing.Point(464, 169)
         Me.Team1Frame5.Name = "Team1Frame5"
         Me.Team1Frame5.Size = New System.Drawing.Size(51, 60)
@@ -570,10 +570,10 @@ Partial Class PlayingForm
         '
         Me.Team1Frame12.BackColor = System.Drawing.Color.White
         Me.Team1Frame12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame12.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame12.Location = New System.Drawing.Point(872, 169)
         Me.Team1Frame12.Name = "Team1Frame12"
-        Me.Team1Frame12.Size = New System.Drawing.Size(51, 60)
+        Me.Team1Frame12.Size = New System.Drawing.Size(75, 60)
         Me.Team1Frame12.TabIndex = 56
         Me.Team1Frame12.Text = "0"
         Me.Team1Frame12.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -606,7 +606,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame11.BackColor = System.Drawing.Color.White
         Me.Team1Frame11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame11.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame11.Location = New System.Drawing.Point(814, 169)
         Me.Team1Frame11.Name = "Team1Frame11"
         Me.Team1Frame11.Size = New System.Drawing.Size(51, 60)
@@ -642,7 +642,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame10.BackColor = System.Drawing.Color.White
         Me.Team1Frame10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame10.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame10.Location = New System.Drawing.Point(755, 169)
         Me.Team1Frame10.Name = "Team1Frame10"
         Me.Team1Frame10.Size = New System.Drawing.Size(51, 60)
@@ -678,7 +678,7 @@ Partial Class PlayingForm
         '
         Me.Team1Frame9.BackColor = System.Drawing.Color.White
         Me.Team1Frame9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team1Frame9.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1Frame9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team1Frame9.Location = New System.Drawing.Point(697, 169)
         Me.Team1Frame9.Name = "Team1Frame9"
         Me.Team1Frame9.Size = New System.Drawing.Size(51, 60)
@@ -691,7 +691,7 @@ Partial Class PlayingForm
         Me.Team1Frame12D.BackColor = System.Drawing.Color.LightGray
         Me.Team1Frame12D.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Team1Frame12D.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Team1Frame12D.Location = New System.Drawing.Point(901, 193)
+        Me.Team1Frame12D.Location = New System.Drawing.Point(924, 169)
         Me.Team1Frame12D.Name = "Team1Frame12D"
         Me.Team1Frame12D.Size = New System.Drawing.Size(23, 27)
         Me.Team1Frame12D.TabIndex = 59
@@ -703,9 +703,9 @@ Partial Class PlayingForm
         Me.Team1Total.BackColor = System.Drawing.Color.White
         Me.Team1Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Team1Total.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Team1Total.Location = New System.Drawing.Point(947, 169)
+        Me.Team1Total.Location = New System.Drawing.Point(953, 168)
         Me.Team1Total.Name = "Team1Total"
-        Me.Team1Total.Size = New System.Drawing.Size(51, 60)
+        Me.Team1Total.Size = New System.Drawing.Size(85, 60)
         Me.Team1Total.TabIndex = 60
         Me.Team1Total.Text = "0"
         Me.Team1Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -715,9 +715,9 @@ Partial Class PlayingForm
         Me.Team2Total.BackColor = System.Drawing.Color.White
         Me.Team2Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Team2Total.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Team2Total.Location = New System.Drawing.Point(947, 289)
+        Me.Team2Total.Location = New System.Drawing.Point(953, 289)
         Me.Team2Total.Name = "Team2Total"
-        Me.Team2Total.Size = New System.Drawing.Size(51, 60)
+        Me.Team2Total.Size = New System.Drawing.Size(85, 60)
         Me.Team2Total.TabIndex = 98
         Me.Team2Total.Text = "0"
         Me.Team2Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -727,7 +727,7 @@ Partial Class PlayingForm
         Me.Team2Frame12D.BackColor = System.Drawing.Color.LightGray
         Me.Team2Frame12D.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Team2Frame12D.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Team2Frame12D.Location = New System.Drawing.Point(901, 313)
+        Me.Team2Frame12D.Location = New System.Drawing.Point(924, 289)
         Me.Team2Frame12D.Name = "Team2Frame12D"
         Me.Team2Frame12D.Size = New System.Drawing.Size(23, 27)
         Me.Team2Frame12D.TabIndex = 97
@@ -762,10 +762,10 @@ Partial Class PlayingForm
         '
         Me.Team2Frame12.BackColor = System.Drawing.Color.White
         Me.Team2Frame12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame12.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame12.Location = New System.Drawing.Point(872, 289)
         Me.Team2Frame12.Name = "Team2Frame12"
-        Me.Team2Frame12.Size = New System.Drawing.Size(51, 60)
+        Me.Team2Frame12.Size = New System.Drawing.Size(75, 60)
         Me.Team2Frame12.TabIndex = 94
         Me.Team2Frame12.Text = "0"
         Me.Team2Frame12.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -798,7 +798,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame11.BackColor = System.Drawing.Color.White
         Me.Team2Frame11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame11.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame11.Location = New System.Drawing.Point(814, 289)
         Me.Team2Frame11.Name = "Team2Frame11"
         Me.Team2Frame11.Size = New System.Drawing.Size(51, 60)
@@ -834,7 +834,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame10.BackColor = System.Drawing.Color.White
         Me.Team2Frame10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame10.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame10.Location = New System.Drawing.Point(755, 289)
         Me.Team2Frame10.Name = "Team2Frame10"
         Me.Team2Frame10.Size = New System.Drawing.Size(51, 60)
@@ -870,7 +870,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame9.BackColor = System.Drawing.Color.White
         Me.Team2Frame9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame9.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame9.Location = New System.Drawing.Point(697, 289)
         Me.Team2Frame9.Name = "Team2Frame9"
         Me.Team2Frame9.Size = New System.Drawing.Size(51, 60)
@@ -906,7 +906,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame8.BackColor = System.Drawing.Color.White
         Me.Team2Frame8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame8.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame8.Location = New System.Drawing.Point(639, 289)
         Me.Team2Frame8.Name = "Team2Frame8"
         Me.Team2Frame8.Size = New System.Drawing.Size(51, 60)
@@ -942,7 +942,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame7.BackColor = System.Drawing.Color.White
         Me.Team2Frame7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame7.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame7.Location = New System.Drawing.Point(581, 289)
         Me.Team2Frame7.Name = "Team2Frame7"
         Me.Team2Frame7.Size = New System.Drawing.Size(51, 60)
@@ -978,7 +978,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame6.BackColor = System.Drawing.Color.White
         Me.Team2Frame6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame6.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame6.Location = New System.Drawing.Point(522, 289)
         Me.Team2Frame6.Name = "Team2Frame6"
         Me.Team2Frame6.Size = New System.Drawing.Size(51, 60)
@@ -1014,7 +1014,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame5.BackColor = System.Drawing.Color.White
         Me.Team2Frame5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame5.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame5.Location = New System.Drawing.Point(464, 289)
         Me.Team2Frame5.Name = "Team2Frame5"
         Me.Team2Frame5.Size = New System.Drawing.Size(51, 60)
@@ -1050,7 +1050,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame4.BackColor = System.Drawing.Color.White
         Me.Team2Frame4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame4.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame4.Location = New System.Drawing.Point(406, 289)
         Me.Team2Frame4.Name = "Team2Frame4"
         Me.Team2Frame4.Size = New System.Drawing.Size(51, 60)
@@ -1086,7 +1086,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame3.BackColor = System.Drawing.Color.White
         Me.Team2Frame3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame3.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame3.Location = New System.Drawing.Point(347, 289)
         Me.Team2Frame3.Name = "Team2Frame3"
         Me.Team2Frame3.Size = New System.Drawing.Size(51, 60)
@@ -1122,7 +1122,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame2.BackColor = System.Drawing.Color.White
         Me.Team2Frame2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame2.Location = New System.Drawing.Point(289, 289)
         Me.Team2Frame2.Name = "Team2Frame2"
         Me.Team2Frame2.Size = New System.Drawing.Size(51, 60)
@@ -1158,7 +1158,7 @@ Partial Class PlayingForm
         '
         Me.Team2Frame1.BackColor = System.Drawing.Color.White
         Me.Team2Frame1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team2Frame1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2Frame1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team2Frame1.Location = New System.Drawing.Point(231, 289)
         Me.Team2Frame1.Name = "Team2Frame1"
         Me.Team2Frame1.Size = New System.Drawing.Size(51, 60)
@@ -1171,9 +1171,9 @@ Partial Class PlayingForm
         Me.Team3Total.BackColor = System.Drawing.Color.White
         Me.Team3Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Team3Total.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Team3Total.Location = New System.Drawing.Point(947, 415)
+        Me.Team3Total.Location = New System.Drawing.Point(953, 415)
         Me.Team3Total.Name = "Team3Total"
-        Me.Team3Total.Size = New System.Drawing.Size(51, 60)
+        Me.Team3Total.Size = New System.Drawing.Size(85, 60)
         Me.Team3Total.TabIndex = 136
         Me.Team3Total.Text = "0"
         Me.Team3Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1183,7 +1183,7 @@ Partial Class PlayingForm
         Me.Team3Frame12D.BackColor = System.Drawing.Color.LightGray
         Me.Team3Frame12D.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Team3Frame12D.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Team3Frame12D.Location = New System.Drawing.Point(901, 439)
+        Me.Team3Frame12D.Location = New System.Drawing.Point(924, 415)
         Me.Team3Frame12D.Name = "Team3Frame12D"
         Me.Team3Frame12D.Size = New System.Drawing.Size(23, 27)
         Me.Team3Frame12D.TabIndex = 135
@@ -1218,10 +1218,10 @@ Partial Class PlayingForm
         '
         Me.Team3Frame12.BackColor = System.Drawing.Color.White
         Me.Team3Frame12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame12.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame12.Location = New System.Drawing.Point(872, 415)
         Me.Team3Frame12.Name = "Team3Frame12"
-        Me.Team3Frame12.Size = New System.Drawing.Size(51, 60)
+        Me.Team3Frame12.Size = New System.Drawing.Size(75, 60)
         Me.Team3Frame12.TabIndex = 132
         Me.Team3Frame12.Text = "0"
         Me.Team3Frame12.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -1254,7 +1254,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame11.BackColor = System.Drawing.Color.White
         Me.Team3Frame11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame11.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame11.Location = New System.Drawing.Point(814, 415)
         Me.Team3Frame11.Name = "Team3Frame11"
         Me.Team3Frame11.Size = New System.Drawing.Size(51, 60)
@@ -1290,7 +1290,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame10.BackColor = System.Drawing.Color.White
         Me.Team3Frame10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame10.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame10.Location = New System.Drawing.Point(755, 415)
         Me.Team3Frame10.Name = "Team3Frame10"
         Me.Team3Frame10.Size = New System.Drawing.Size(51, 60)
@@ -1326,7 +1326,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame9.BackColor = System.Drawing.Color.White
         Me.Team3Frame9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame9.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame9.Location = New System.Drawing.Point(697, 415)
         Me.Team3Frame9.Name = "Team3Frame9"
         Me.Team3Frame9.Size = New System.Drawing.Size(51, 60)
@@ -1362,7 +1362,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame8.BackColor = System.Drawing.Color.White
         Me.Team3Frame8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame8.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame8.Location = New System.Drawing.Point(639, 415)
         Me.Team3Frame8.Name = "Team3Frame8"
         Me.Team3Frame8.Size = New System.Drawing.Size(51, 60)
@@ -1398,7 +1398,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame7.BackColor = System.Drawing.Color.White
         Me.Team3Frame7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame7.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame7.Location = New System.Drawing.Point(581, 415)
         Me.Team3Frame7.Name = "Team3Frame7"
         Me.Team3Frame7.Size = New System.Drawing.Size(51, 60)
@@ -1434,7 +1434,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame6.BackColor = System.Drawing.Color.White
         Me.Team3Frame6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame6.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame6.Location = New System.Drawing.Point(522, 415)
         Me.Team3Frame6.Name = "Team3Frame6"
         Me.Team3Frame6.Size = New System.Drawing.Size(51, 60)
@@ -1470,7 +1470,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame5.BackColor = System.Drawing.Color.White
         Me.Team3Frame5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame5.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame5.Location = New System.Drawing.Point(464, 415)
         Me.Team3Frame5.Name = "Team3Frame5"
         Me.Team3Frame5.Size = New System.Drawing.Size(51, 60)
@@ -1506,7 +1506,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame4.BackColor = System.Drawing.Color.White
         Me.Team3Frame4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame4.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame4.Location = New System.Drawing.Point(406, 415)
         Me.Team3Frame4.Name = "Team3Frame4"
         Me.Team3Frame4.Size = New System.Drawing.Size(51, 60)
@@ -1542,7 +1542,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame3.BackColor = System.Drawing.Color.White
         Me.Team3Frame3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame3.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame3.Location = New System.Drawing.Point(347, 415)
         Me.Team3Frame3.Name = "Team3Frame3"
         Me.Team3Frame3.Size = New System.Drawing.Size(51, 60)
@@ -1578,7 +1578,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame2.BackColor = System.Drawing.Color.White
         Me.Team3Frame2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame2.Location = New System.Drawing.Point(289, 415)
         Me.Team3Frame2.Name = "Team3Frame2"
         Me.Team3Frame2.Size = New System.Drawing.Size(51, 60)
@@ -1614,7 +1614,7 @@ Partial Class PlayingForm
         '
         Me.Team3Frame1.BackColor = System.Drawing.Color.White
         Me.Team3Frame1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team3Frame1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3Frame1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team3Frame1.Location = New System.Drawing.Point(231, 415)
         Me.Team3Frame1.Name = "Team3Frame1"
         Me.Team3Frame1.Size = New System.Drawing.Size(51, 60)
@@ -1627,9 +1627,9 @@ Partial Class PlayingForm
         Me.Team4Total.BackColor = System.Drawing.Color.White
         Me.Team4Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Team4Total.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Team4Total.Location = New System.Drawing.Point(947, 533)
+        Me.Team4Total.Location = New System.Drawing.Point(953, 533)
         Me.Team4Total.Name = "Team4Total"
-        Me.Team4Total.Size = New System.Drawing.Size(51, 60)
+        Me.Team4Total.Size = New System.Drawing.Size(85, 60)
         Me.Team4Total.TabIndex = 174
         Me.Team4Total.Text = "0"
         Me.Team4Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1639,7 +1639,7 @@ Partial Class PlayingForm
         Me.Team4Frame12D.BackColor = System.Drawing.Color.LightGray
         Me.Team4Frame12D.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Team4Frame12D.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Team4Frame12D.Location = New System.Drawing.Point(901, 557)
+        Me.Team4Frame12D.Location = New System.Drawing.Point(924, 533)
         Me.Team4Frame12D.Name = "Team4Frame12D"
         Me.Team4Frame12D.Size = New System.Drawing.Size(23, 27)
         Me.Team4Frame12D.TabIndex = 173
@@ -1674,10 +1674,10 @@ Partial Class PlayingForm
         '
         Me.Team4Frame12.BackColor = System.Drawing.Color.White
         Me.Team4Frame12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame12.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame12.Location = New System.Drawing.Point(872, 533)
         Me.Team4Frame12.Name = "Team4Frame12"
-        Me.Team4Frame12.Size = New System.Drawing.Size(51, 60)
+        Me.Team4Frame12.Size = New System.Drawing.Size(75, 60)
         Me.Team4Frame12.TabIndex = 170
         Me.Team4Frame12.Text = "0"
         Me.Team4Frame12.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -1710,7 +1710,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame11.BackColor = System.Drawing.Color.White
         Me.Team4Frame11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame11.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame11.Location = New System.Drawing.Point(814, 533)
         Me.Team4Frame11.Name = "Team4Frame11"
         Me.Team4Frame11.Size = New System.Drawing.Size(51, 60)
@@ -1746,7 +1746,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame10.BackColor = System.Drawing.Color.White
         Me.Team4Frame10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame10.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame10.Location = New System.Drawing.Point(755, 533)
         Me.Team4Frame10.Name = "Team4Frame10"
         Me.Team4Frame10.Size = New System.Drawing.Size(51, 60)
@@ -1782,7 +1782,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame9.BackColor = System.Drawing.Color.White
         Me.Team4Frame9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame9.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame9.Location = New System.Drawing.Point(697, 533)
         Me.Team4Frame9.Name = "Team4Frame9"
         Me.Team4Frame9.Size = New System.Drawing.Size(51, 60)
@@ -1818,7 +1818,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame8.BackColor = System.Drawing.Color.White
         Me.Team4Frame8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame8.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame8.Location = New System.Drawing.Point(639, 533)
         Me.Team4Frame8.Name = "Team4Frame8"
         Me.Team4Frame8.Size = New System.Drawing.Size(51, 60)
@@ -1854,7 +1854,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame7.BackColor = System.Drawing.Color.White
         Me.Team4Frame7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame7.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame7.Location = New System.Drawing.Point(581, 533)
         Me.Team4Frame7.Name = "Team4Frame7"
         Me.Team4Frame7.Size = New System.Drawing.Size(51, 60)
@@ -1890,7 +1890,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame6.BackColor = System.Drawing.Color.White
         Me.Team4Frame6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame6.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame6.Location = New System.Drawing.Point(522, 533)
         Me.Team4Frame6.Name = "Team4Frame6"
         Me.Team4Frame6.Size = New System.Drawing.Size(51, 60)
@@ -1926,7 +1926,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame5.BackColor = System.Drawing.Color.White
         Me.Team4Frame5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame5.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame5.Location = New System.Drawing.Point(464, 533)
         Me.Team4Frame5.Name = "Team4Frame5"
         Me.Team4Frame5.Size = New System.Drawing.Size(51, 60)
@@ -1962,7 +1962,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame4.BackColor = System.Drawing.Color.White
         Me.Team4Frame4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame4.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame4.Location = New System.Drawing.Point(406, 533)
         Me.Team4Frame4.Name = "Team4Frame4"
         Me.Team4Frame4.Size = New System.Drawing.Size(51, 60)
@@ -1998,7 +1998,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame3.BackColor = System.Drawing.Color.White
         Me.Team4Frame3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame3.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame3.Location = New System.Drawing.Point(347, 533)
         Me.Team4Frame3.Name = "Team4Frame3"
         Me.Team4Frame3.Size = New System.Drawing.Size(51, 60)
@@ -2034,7 +2034,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame2.BackColor = System.Drawing.Color.White
         Me.Team4Frame2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame2.Location = New System.Drawing.Point(289, 533)
         Me.Team4Frame2.Name = "Team4Frame2"
         Me.Team4Frame2.Size = New System.Drawing.Size(51, 60)
@@ -2070,7 +2070,7 @@ Partial Class PlayingForm
         '
         Me.Team4Frame1.BackColor = System.Drawing.Color.White
         Me.Team4Frame1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Team4Frame1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4Frame1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Team4Frame1.Location = New System.Drawing.Point(231, 533)
         Me.Team4Frame1.Name = "Team4Frame1"
         Me.Team4Frame1.Size = New System.Drawing.Size(51, 60)
@@ -2084,11 +2084,11 @@ Partial Class PlayingForm
         Me.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.HomeButton.FlatAppearance.BorderSize = 0
         Me.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HomeButton.Location = New System.Drawing.Point(1025, 16)
+        Me.HomeButton.Location = New System.Drawing.Point(35, 37)
         Me.HomeButton.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.HomeButton.Name = "HomeButton"
         Me.HomeButton.Size = New System.Drawing.Size(40, 53)
-        Me.HomeButton.TabIndex = 175
+        Me.HomeButton.TabIndex = 1
         Me.HomeButton.UseVisualStyleBackColor = True
         '
         'PictureBox3
@@ -2098,7 +2098,7 @@ Partial Class PlayingForm
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox3.ErrorImage = Nothing
         Me.PictureBox3.InitialImage = Nothing
-        Me.PictureBox3.Location = New System.Drawing.Point(-37, -204)
+        Me.PictureBox3.Location = New System.Drawing.Point(755, -183)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(355, 336)
@@ -2112,7 +2112,7 @@ Partial Class PlayingForm
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.InitialImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(814, 609)
+        Me.PictureBox1.Location = New System.Drawing.Point(-14, 670)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(355, 336)

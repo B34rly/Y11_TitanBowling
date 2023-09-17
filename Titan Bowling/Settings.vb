@@ -46,7 +46,9 @@
         SavingSystem.DeleteFile("3")
         SavingSystem.DeleteFile("4")
 
-        MessageBox.Show("Please restart your game for this to take effect")
-
+        SavingSystem.Init("1")
+        SavingSystem.Init("2")
+        SavingSystem.Init("3")
+        SavingSystem.Init("4")
     End Sub
 End Class

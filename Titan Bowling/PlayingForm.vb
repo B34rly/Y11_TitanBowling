@@ -8,8 +8,9 @@ Public Class PlayingForm
         Me.Close()
     End Sub
 
+    <Serializable>
     Public Class TeamData
-        Property TeamMembers As String()
+        Public Property TeamMembers As String()
         Public Property TeamName As String
         Public Property TeamID As Integer '1 to 4
         Public Property Scores As Integer()()
@@ -123,11 +124,11 @@ Public Class PlayingForm
 
     End Class
 
+    <Serializable>
     Public Class GameData
-        Property Teams As TeamData()
+        Public Property Teams As TeamData()
         Public Property Frames As Integer
         Public Property CurrentFrame As Integer
-        Private Property PinsLeft As Integer
         Public Property CurrentTeam As Integer
 
         Public Sub AddTeam(Team As TeamData)
@@ -143,14 +144,39 @@ Public Class PlayingForm
             Frames = 12
             CurrentFrame = 0
             CurrentTeam = 0
-            PinsLeft = 10
 
             For Each Team In Teams
-                Team.Scores = New Integer(Frames - 1)() {}
-                For Frame As Integer = 0 To (Frames - 1)
-                    Team.Scores(Frame) = New Integer() {-1, -1, -1}
-                Next
-                Team.Scores(Frames - 1) = New Integer() {-1, -1, -1, -1}
+                Dim save = SavingSystem.Load(SavingSystem.CurrentActiveSave)
+
+                Debug.WriteLine("Nothing?")
+                Debug.WriteLine(save.ascores.Length)
+
+                Select Case Team.TeamID 'loads the save game data into the form
+                    Case 1
+                        Team.Scores = New Integer(Frames - 1)() {}
+                        For Frame As Integer = 0 To (Frames - 1)
+                            Team.Scores(Frame) = New Integer() {save.ascores(Frame * 3), save.ascores((Frame * 3) + 1), save.ascores((Frame * 3) + 2)} 'convrting 2d array to 1d array
+                        Next
+                        Team.Scores(Frames - 1) = New Integer() {save.ascores(33), save.ascores(34), save.ascores(35), save.ascores(36)}
+                    Case 2
+                        Team.Scores = New Integer(Frames - 1)() {}
+                        For Frame As Integer = 0 To (Frames - 1)
+                            Team.Scores(Frame) = New Integer() {save.bscores(Frame * 3), save.bscores((Frame * 3) + 1), save.bscores((Frame * 3) + 2)}
+                        Next
+                        Team.Scores(Frames - 1) = New Integer() {save.bscores(33), save.bscores(34), save.bscores(35), save.bscores(36)}
+                    Case 3
+                        Team.Scores = New Integer(Frames - 1)() {}
+                        For Frame As Integer = 0 To (Frames - 1)
+                            Team.Scores(Frame) = New Integer() {save.cscores(Frame * 3), save.cscores((Frame * 3) + 1), save.cscores((Frame * 3) + 2)}
+                        Next
+                        Team.Scores(Frames - 1) = New Integer() {save.cscores(33), save.cscores(34), save.cscores(35), save.cscores(36)}
+                    Case 4
+                        Team.Scores = New Integer(Frames - 1)() {}
+                        For Frame As Integer = 0 To (Frames - 1)
+                            Team.Scores(Frame) = New Integer() {save.dscores(Frame * 3), save.dscores((Frame * 3) + 1), save.dscores((Frame * 3) + 2)}
+                        Next
+                        Team.Scores(Frames - 1) = New Integer() {save.dscores(33), save.dscores(34), save.dscores(35), save.dscores(36)}
+                End Select
             Next
         End Sub
     End Class
@@ -270,10 +296,54 @@ Public Class PlayingForm
                     Next
                     Debug.WriteLine("")
                 Next
+
+
                 Dim FrameScore As Integer() = Team.Scores(CurrentFrame)
                 Dim CurrentPlayer As String = Team.GetPlayer(CurrentFrame)
                 Dim CurrentTeam As Integer = Array.IndexOf(Game.Teams, Team)
                 Dim PinsDowned As Integer
+
+                Dim currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}", CurrentTeam + 1, CurrentFrame + 1))
+                Dim currentFrameLabelL = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "L"))
+                Dim currentFrameLabelR = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "R"))
+                Dim currentFrameLabelD = If(CurrentFrame = 11, Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "D")), Nothing)
+                Dim teamTotalLabel = Me.Controls(String.Format("Team{0}Total", CurrentTeam + 1))
+
+
+                If FrameScore(1) <> -1 Then
+                    'account for strikes and spares
+                    If FrameScore(1) = 10 Then
+                        currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = "")
+                        currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = "X")
+                    ElseIf Framescore(1) + frameScore(2) = 10 Then
+                        currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = String.Format(FrameScore(1)))
+                        currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = "/")
+                    Else
+                        currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = String.Format(FrameScore(1)))
+                        currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = String.Format(FrameScore(2)))
+                    End If
+                    If CurrentFrame = 11 Then
+                        If FrameScore(3) = 10 Then
+                            currentFrameLabelD.Invoke(Sub() currentFrameLabelD.Text = "X")
+                        ElseIf FrameScore(3) = -1 Then
+                            currentFrameLabelD.Invoke(Sub() currentFrameLabelD.Text = "")
+                        Else
+                            currentFrameLabelD.Invoke(Sub() currentFrameLabelD.Text = String.Format(FrameScore(3)))
+                        End If
+                        If FrameScore(1) = 10 Then
+                            currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = "X")
+                            currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = String.Format(If(FrameScore(2) = 10, "X", FrameScore(2))))
+                            If FrameScore(2) + FrameScore(3) = 10 Then
+                                currentFrameLabelD.Invoke(Sub() currentFrameLabelD.Text = "/")
+                            End If
+                        End If
+                    End If
+
+                    teamTotalLabel.Invoke(Sub() teamTotalLabel.Text = String.Format(FrameScore(0)))
+                    currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(FrameScore(0)))
+
+                    Continue For
+                End If
 
                 PinsDowned = Await GetIntegerInput(String.Format("It's currently {0}'s turn! How many pins did they knock over? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), 10)
                 'Make sure it is within correct values (0-10 inclusive)
@@ -281,63 +351,83 @@ Public Class PlayingForm
                 Debug.WriteLine(PinsDowned.ToString)
 
                 FrameScore(1) = PinsDowned
-                Dim currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "L"))
-                currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(FrameScore(1)))
+
+                currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = String.Format(FrameScore(1)))
 
                 If PinsDowned = 10 Then
                     ' strike
-                    currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = "")
+                    currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = "")
 
                     If CurrentFrame = (Game.Frames - 1) Then 'strike in the last frame
-                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = "X")
+                        currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = "X")
 
                         PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a strike in the last frame, they get 2 more bonus rolls! How many pins did they knock over in the first roll? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), 10)
                         FrameScore(2) = PinsDowned
 
-                        currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "R"))
-                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(If(FrameScore(2) = 10, "X", FrameScore(2))))
+                        currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = String.Format(If(FrameScore(2) = 10, "X", FrameScore(2))))
 
                         Dim PinsLeft As Integer = If(PinsDowned = 10, 10, 10 - PinsDowned)
 
                         PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a strike in the last frame, they get 2 more bonus rolls! How many pins did they knock over in the second roll? (Must be a number from 0 to {1}.)", CurrentPlayer, PinsLeft), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), PinsLeft.ToString)
 
                         FrameScore(3) = PinsDowned
-                        currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "D"))
-                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(If(FrameScore(3) = 10, "X", FrameScore(3))))
+
+                        currentFrameLabelD.Invoke(Sub() currentFrameLabelD.Text = String.Format(If(FrameScore(3) = 10, "X", FrameScore(3))))
                     Else 'Strike in any frame not the last
                         FrameScore(2) = -1
-                        currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "R"))
-                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = "X")
+
+                        currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = "X")
                     End If
                 Else
                     Dim PinsLeft As Integer = If(10 - PinsDowned = 0, 10, 10 - PinsDowned)
 
                     PinsDowned = Await GetIntegerInput(String.Format("For a chance to spare, {0} can bowl a second time! How many pins did they knock over in the second roll? (Must be a number from 0 to {1}.)", CurrentPlayer, PinsLeft.ToString), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), PinsLeft)
                     FrameScore(2) = PinsDowned
-                    currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "R"))
-                    currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(FrameScore(2)))
+
+                    currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = String.Format(FrameScore(2)))
 
                     If FrameScore(1) + FrameScore(2) = 10 Then
                         MsgBox(String.Format("Congratulations on the spare, {0}!", CurrentPlayer), 1, "Spare!")
-                        currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = "/")
+                        currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = "/")
 
                         If CurrentFrame = (Game.Frames - 1) Then
                             PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a spare in the last frame, they get 1 bonus roll! How many pins did they knock over in this roll? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), 10)
                             FrameScore(3) = PinsDowned
 
-                            currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "D"))
-                            currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(If(FrameScore(3) = 10, "X", FrameScore(3))))
+
+                            currentFrameLabelD.Invoke(Sub() currentFrameLabelD.Text = String.Format(If(FrameScore(3) = 10, "X", FrameScore(3))))
                         End If
                     End If
                 End If
 
                 Team.CalculateScore()
 
-                currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, ""))
                 currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(Team.Scores(CurrentFrame)(0)))
 
-                currentFrameLabel = Me.Controls(String.Format("Team{0}Total", CurrentTeam + 1))
-                currentFrameLabel.Invoke(Sub() currentFrameLabel.Text = String.Format(Team.Scores(CurrentFrame)(0)))
+                teamTotalLabel.Invoke(Sub() teamTotalLabel.Text = String.Format(Team.Scores(CurrentFrame)(0)))
+
+                Dim save = SavingSystem.Load(SavingSystem.CurrentActiveSave)
+
+                Dim oneDimensionalScores(36) As Integer
+                For Each Frame In Team.Scores
+                    For Each Score In Frame
+                        oneDimensionalScores(Array.IndexOf(Team.Scores, Frame) * 3 + Array.IndexOf(Frame, Score)) = Score
+                    Next
+                Next
+                Debug.WriteLine(oneDimensionalScores)
+
+                Select Case Team.TeamID
+                    Case 1
+                        save.ascores = oneDimensionalScores
+                    Case 2
+                        save.bscores = oneDimensionalScores
+                    Case 3
+                        save.cscores = oneDimensionalScores
+                    Case 4
+                        save.dscores = oneDimensionalScores
+                End Select
+
+                SavingSystem.Save(save, SavingSystem.CurrentActiveSave)
                 'to display scores it'd be a pain in the neck if our labels aren't ordered/sorted.
                 'it's easiest if they're stored in an array, but if they have a naming scheme too that'll work
                 'i saw u started with one then gave up because there were hundreds of labels lol
