@@ -6,7 +6,10 @@
     End Sub
 
     Private Sub SavesForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Reset_Buttons()
+    End Sub
 
+    Private Sub Reset_Buttons()
         Dim save1 = SavingSystem.Load("1")
         Dim save2 = SavingSystem.Load("2")
         Dim save3 = SavingSystem.Load("3")
@@ -43,25 +46,38 @@
 
         Next
 
+        For i As Integer = 1 To 4
+            Debug.WriteLine(i)
+            If i = SavingSystem.CurrentActiveSave Then
+                Me.Controls("Button" + i.ToString).BackColor = Color.FromArgb(17, 35, 66)
+            Else
+                Me.Controls("Button" + i.ToString).BackColor = Color.FromArgb(17, 25, 56)
+            End If
+
+        Next
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         SavingSystem.CurrentActiveSave = "1"
+        Reset_Buttons()
         MessageBox.Show("Save 1 Selected")
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         SavingSystem.CurrentActiveSave = "2"
+        Reset_Buttons()
         MessageBox.Show("Save 2 Selected")
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         SavingSystem.CurrentActiveSave = "3"
+        Reset_Buttons()
         MessageBox.Show("Save 3 Selected")
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         SavingSystem.CurrentActiveSave = "4"
+        Reset_Buttons()
         MessageBox.Show("Save 4 Selected")
     End Sub
 
@@ -69,6 +85,7 @@
         If MsgBox("Are you sure you want to delete save 1?", MsgBoxStyle.YesNo, "Delete Save 1?") = 6 Then
             SavingSystem.DeleteFile("1")
             SavingSystem.Init("1")
+            Reset_Buttons()
         End If
     End Sub
 
@@ -76,6 +93,7 @@
         If MsgBox("Are you sure you want to delete save 2?", MsgBoxStyle.YesNo, "Delete Save 2?") = 6 Then
             SavingSystem.DeleteFile("2")
             SavingSystem.Init("2")
+            Reset_Buttons()
         End If
     End Sub
 
@@ -83,6 +101,7 @@
         If MsgBox("Are you sure you want to delete save 3?", MsgBoxStyle.YesNo, "Delete Save 3?") = 6 Then
             SavingSystem.DeleteFile("3")
             SavingSystem.Init("3")
+            Reset_Buttons()
         End If
     End Sub
 
@@ -90,6 +109,7 @@
         If MsgBox("Are you sure you want to delete save 4?", MsgBoxStyle.YesNo, "Delete Save 4?") = 6 Then
             SavingSystem.DeleteFile("4")
             SavingSystem.Init("4")
+            Reset_Buttons()
         End If
     End Sub
 End Class

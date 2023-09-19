@@ -46,10 +46,10 @@ Partial Class SavesForm
         '
         Me.Shape.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.square_shape
         Me.Shape.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Shape.Location = New System.Drawing.Point(883, 480)
-        Me.Shape.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Shape.Location = New System.Drawing.Point(1104, 600)
+        Me.Shape.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Shape.Name = "Shape"
-        Me.Shape.Size = New System.Drawing.Size(251, 323)
+        Me.Shape.Size = New System.Drawing.Size(314, 404)
         Me.Shape.TabIndex = 16
         Me.Shape.TabStop = False
         '
@@ -60,10 +60,10 @@ Partial Class SavesForm
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox3.ErrorImage = Nothing
         Me.PictureBox3.InitialImage = Nothing
-        Me.PictureBox3.Location = New System.Drawing.Point(-143, 137)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox3.Location = New System.Drawing.Point(-179, 171)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(355, 336)
+        Me.PictureBox3.Size = New System.Drawing.Size(444, 420)
         Me.PictureBox3.TabIndex = 15
         Me.PictureBox3.TabStop = False
         '
@@ -73,9 +73,10 @@ Partial Class SavesForm
         Me.Title.BackColor = System.Drawing.Color.Transparent
         Me.Title.Font = New System.Drawing.Font("Segoe UI", 55.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Title.ForeColor = System.Drawing.Color.White
-        Me.Title.Location = New System.Drawing.Point(395, 48)
+        Me.Title.Location = New System.Drawing.Point(494, 60)
+        Me.Title.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(326, 123)
+        Me.Title.Size = New System.Drawing.Size(389, 146)
         Me.Title.TabIndex = 14
         Me.Title.Text = "SAVES"
         '
@@ -86,25 +87,25 @@ Partial Class SavesForm
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(238, 207)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Location = New System.Drawing.Point(298, 259)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(614, 79)
+        Me.Button1.Size = New System.Drawing.Size(768, 99)
         Me.Button1.TabIndex = 17
         Me.Button1.Text = "Save 1 - Team A, Team B - 7/10 Frames"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(66, Byte), Integer))
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(238, 293)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button2.Location = New System.Drawing.Point(298, 366)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(614, 79)
+        Me.Button2.Size = New System.Drawing.Size(768, 99)
         Me.Button2.TabIndex = 18
         Me.Button2.Text = "Save 2 - Team A, Team B, Team C - 12/12 Frames"
         Me.Button2.UseVisualStyleBackColor = False
@@ -116,10 +117,10 @@ Partial Class SavesForm
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(238, 381)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button3.Location = New System.Drawing.Point(298, 476)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(614, 79)
+        Me.Button3.Size = New System.Drawing.Size(768, 99)
         Me.Button3.TabIndex = 19
         Me.Button3.Text = "Save 3 - Team A, Team B - 5/12 Frames"
         Me.Button3.UseVisualStyleBackColor = False
@@ -131,10 +132,10 @@ Partial Class SavesForm
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(238, 468)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button4.Location = New System.Drawing.Point(298, 585)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(614, 79)
+        Me.Button4.Size = New System.Drawing.Size(768, 99)
         Me.Button4.TabIndex = 20
         Me.Button4.Text = "Save 4 - Team A, Team B, Team C, Team D - 2/10 Frames"
         Me.Button4.UseVisualStyleBackColor = False
@@ -145,10 +146,10 @@ Partial Class SavesForm
         Me.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.HomeButton.FlatAppearance.BorderSize = 0
         Me.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HomeButton.Location = New System.Drawing.Point(23, 27)
-        Me.HomeButton.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.HomeButton.Location = New System.Drawing.Point(29, 34)
+        Me.HomeButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.HomeButton.Name = "HomeButton"
-        Me.HomeButton.Size = New System.Drawing.Size(40, 53)
+        Me.HomeButton.Size = New System.Drawing.Size(50, 66)
         Me.HomeButton.TabIndex = 21
         Me.HomeButton.UseVisualStyleBackColor = True
         '
@@ -159,10 +160,10 @@ Partial Class SavesForm
         Me.Delete1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Delete1.ErrorImage = Nothing
         Me.Delete1.InitialImage = Nothing
-        Me.Delete1.Location = New System.Drawing.Point(870, 207)
-        Me.Delete1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Delete1.Location = New System.Drawing.Point(1088, 259)
+        Me.Delete1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Delete1.Name = "Delete1"
-        Me.Delete1.Size = New System.Drawing.Size(85, 79)
+        Me.Delete1.Size = New System.Drawing.Size(106, 99)
         Me.Delete1.TabIndex = 22
         Me.Delete1.TabStop = False
         '
@@ -173,10 +174,10 @@ Partial Class SavesForm
         Me.Delete3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Delete3.ErrorImage = Nothing
         Me.Delete3.InitialImage = Nothing
-        Me.Delete3.Location = New System.Drawing.Point(870, 382)
-        Me.Delete3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Delete3.Location = New System.Drawing.Point(1088, 478)
+        Me.Delete3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Delete3.Name = "Delete3"
-        Me.Delete3.Size = New System.Drawing.Size(85, 79)
+        Me.Delete3.Size = New System.Drawing.Size(106, 99)
         Me.Delete3.TabIndex = 23
         Me.Delete3.TabStop = False
         '
@@ -187,10 +188,10 @@ Partial Class SavesForm
         Me.Delete2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Delete2.ErrorImage = Nothing
         Me.Delete2.InitialImage = Nothing
-        Me.Delete2.Location = New System.Drawing.Point(870, 295)
-        Me.Delete2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Delete2.Location = New System.Drawing.Point(1088, 369)
+        Me.Delete2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Delete2.Name = "Delete2"
-        Me.Delete2.Size = New System.Drawing.Size(85, 79)
+        Me.Delete2.Size = New System.Drawing.Size(106, 99)
         Me.Delete2.TabIndex = 24
         Me.Delete2.TabStop = False
         '
@@ -201,19 +202,19 @@ Partial Class SavesForm
         Me.Delete4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Delete4.ErrorImage = Nothing
         Me.Delete4.InitialImage = Nothing
-        Me.Delete4.Location = New System.Drawing.Point(870, 468)
-        Me.Delete4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Delete4.Location = New System.Drawing.Point(1088, 585)
+        Me.Delete4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Delete4.Name = "Delete4"
-        Me.Delete4.Size = New System.Drawing.Size(85, 79)
+        Me.Delete4.Size = New System.Drawing.Size(106, 99)
         Me.Delete4.TabIndex = 25
         Me.Delete4.TabStop = False
         '
         'SavesForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1079, 668)
+        Me.ClientSize = New System.Drawing.Size(1349, 835)
         Me.Controls.Add(Me.Delete4)
         Me.Controls.Add(Me.Delete2)
         Me.Controls.Add(Me.Delete3)
@@ -226,7 +227,7 @@ Partial Class SavesForm
         Me.Controls.Add(Me.Shape)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Title)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "SavesForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SavesForm"
