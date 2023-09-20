@@ -25,7 +25,7 @@ Partial Class SupportForm
         Me.Title = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Shape = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.CreditsLabel = New System.Windows.Forms.Label()
         Me.HomeButton = New System.Windows.Forms.Button()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Shape, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,16 +68,16 @@ Partial Class SupportForm
         Me.Shape.TabIndex = 12
         Me.Shape.TabStop = False
         '
-        'Label1
+        'CreditsLabel
         '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(128, 343)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(656, 284)
-        Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Titan Bowling is created by Tirth Patel and Aiden Naji of 11SDD5 as part of the y" &
+        Me.CreditsLabel.BackColor = System.Drawing.Color.Transparent
+        Me.CreditsLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.CreditsLabel.ForeColor = System.Drawing.Color.White
+        Me.CreditsLabel.Location = New System.Drawing.Point(128, 343)
+        Me.CreditsLabel.Name = "CreditsLabel"
+        Me.CreditsLabel.Size = New System.Drawing.Size(656, 284)
+        Me.CreditsLabel.TabIndex = 13
+        Me.CreditsLabel.Text = "Titan Bowling is created by Tirth Patel and Aiden Naji of 11SDD5 as part of the y" &
     "ear 11 major project. All resources used are licensed and used appropriately. "
         '
         'HomeButton
@@ -100,7 +100,7 @@ Partial Class SupportForm
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(76, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1079, 668)
         Me.Controls.Add(Me.HomeButton)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.CreditsLabel)
         Me.Controls.Add(Me.Shape)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Title)
@@ -118,6 +118,6 @@ Partial Class SupportForm
     Friend WithEvents Title As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Shape As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents CreditsLabel As Label
     Friend WithEvents HomeButton As Button
 End Class

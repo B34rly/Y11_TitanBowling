@@ -26,7 +26,7 @@ Partial Class TutorialForm
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Title = New System.Windows.Forms.Label()
         Me.HomeButton = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TutorialText = New System.Windows.Forms.Label()
         CType(Me.Shape, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,16 +81,16 @@ Partial Class TutorialForm
         Me.HomeButton.TabIndex = 20
         Me.HomeButton.UseVisualStyleBackColor = True
         '
-        'Label1
+        'TutorialText
         '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(215, 228)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(656, 368)
-        Me.Label1.TabIndex = 21
-        Me.Label1.Text = "This game follows traditional bowling rules but with a 12 frame game."
+        Me.TutorialText.BackColor = System.Drawing.Color.Transparent
+        Me.TutorialText.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.TutorialText.ForeColor = System.Drawing.Color.White
+        Me.TutorialText.Location = New System.Drawing.Point(215, 228)
+        Me.TutorialText.Name = "TutorialText"
+        Me.TutorialText.Size = New System.Drawing.Size(656, 368)
+        Me.TutorialText.TabIndex = 21
+        Me.TutorialText.Text = "This game follows traditional bowling rules but with a 12 frame game."
         '
         'TutorialForm
         '
@@ -98,7 +98,7 @@ Partial Class TutorialForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(76, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1079, 668)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TutorialText)
         Me.Controls.Add(Me.HomeButton)
         Me.Controls.Add(Me.Shape)
         Me.Controls.Add(Me.PictureBox3)
@@ -118,5 +118,5 @@ Partial Class TutorialForm
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Title As Label
     Friend WithEvents HomeButton As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents TutorialText As Label
 End Class
