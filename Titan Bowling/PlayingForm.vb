@@ -110,8 +110,10 @@ Public Class PlayingForm
 
                 Frame(0) += Total
 
-                If Array.IndexOf(Scores, Frame) = Scores.Length - 1 And Frame(1) <> 10 And Frame(3) <> -1 Then
-                    Frame(0) += Frame(3)
+                If Array.IndexOf(Scores, Frame) = Scores.Length - 1 And Frame(1) <> 10 Then
+                    If Frame(3) <> -1 Then
+                        Frame(0) += Frame(3)
+                    End If
                 End If
 
                 Total = Frame(0)
@@ -128,8 +130,6 @@ Public Class PlayingForm
     Public Class GameData
         Public Property Teams As TeamData()
         Public Property Frames As Integer
-        Public Property CurrentFrame As Integer
-        Public Property CurrentTeam As Integer
 
         Public Sub AddTeam(Team As TeamData)
             If Teams Is Nothing Then
@@ -142,8 +142,6 @@ Public Class PlayingForm
 
         Public Sub ResetFrames()
             Frames = 12
-            CurrentFrame = 0
-            CurrentTeam = 0
 
             For Each Team In Teams
                 Dim save = SavingSystem.Load(SavingSystem.CurrentActiveSave)
@@ -184,7 +182,7 @@ Public Class PlayingForm
         Me.Controls(Team).ForeColor = Color.White
         Me.Controls(Team + "Label").Text = ""
         Me.Controls(Team + "Total").BackColor = Color.White
-        Me.Controls(Team + "Total").Text = ""
+        Me.Controls(Team + "Total").Text = "0"
 
         For FrameNumber As Integer = 1 To 12
             Dim Frame As String = "Frame" + FrameNumber.ToString
@@ -292,7 +290,7 @@ Public Class PlayingForm
 
         While Valid = False
             Do Until AcceptInput
-                Thread.Sleep(200) 'Time is arbitrary. Must be a value large enough to not slow program down, but small enough as to not cause a noticable gap between button clic and response
+                Thread.Sleep(200) 'Time is not affected by much in-code facters. Must be a value large enough to not slow program down, but small enough as to not cause a noticable gap between button clic and response
             Loop
             AcceptInput = False
             Dim Input As String
@@ -314,7 +312,7 @@ Public Class PlayingForm
                     End If
                 End If
             Else
-                MsgBox("You must input numberic characters only!")
+                MsgBox("You must input numeric characters only!")
             End If
         End While
     End Function
@@ -474,7 +472,6 @@ Public Class PlayingForm
         MsgBox("Game is over! No new scores can be inputted. Select a new save to begin a new game", 1, "Game Over!")
         TurnLabel.Invoke(Sub() TurnLabel.Text = "Game over!")
         PinsInput.Invoke(Sub() PinsInput.PlaceholderText = "")
-        'Display final scores!
     End Sub
 
 End Class
