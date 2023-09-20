@@ -23,10 +23,10 @@ Partial Class PlayingForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Title = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Team1 = New System.Windows.Forms.Label()
+        Me.Team2 = New System.Windows.Forms.Label()
+        Me.Team3 = New System.Windows.Forms.Label()
+        Me.Team4 = New System.Windows.Forms.Label()
         Me.Team1Frame1 = New System.Windows.Forms.Label()
         Me.Team1Frame1R = New System.Windows.Forms.Label()
         Me.Team1Frame1L = New System.Windows.Forms.Label()
@@ -206,53 +206,53 @@ Partial Class PlayingForm
         Me.Title.TabIndex = 18
         Me.Title.Text = "PLAYING"
         '
-        'Label1
+        'Team1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(59, 168)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(179, 57)
-        Me.Label1.TabIndex = 19
-        Me.Label1.Text = "TEAM 1"
+        Me.Team1.AutoSize = True
+        Me.Team1.BackColor = System.Drawing.Color.Transparent
+        Me.Team1.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team1.ForeColor = System.Drawing.Color.White
+        Me.Team1.Location = New System.Drawing.Point(59, 168)
+        Me.Team1.Name = "Team1"
+        Me.Team1.Size = New System.Drawing.Size(179, 57)
+        Me.Team1.TabIndex = 19
+        Me.Team1.Text = "TEAM 1"
         '
-        'Label2
+        'Team2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(59, 288)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(179, 57)
-        Me.Label2.TabIndex = 20
-        Me.Label2.Text = "TEAM 2"
+        Me.Team2.AutoSize = True
+        Me.Team2.BackColor = System.Drawing.Color.Transparent
+        Me.Team2.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team2.ForeColor = System.Drawing.Color.White
+        Me.Team2.Location = New System.Drawing.Point(59, 288)
+        Me.Team2.Name = "Team2"
+        Me.Team2.Size = New System.Drawing.Size(179, 57)
+        Me.Team2.TabIndex = 20
+        Me.Team2.Text = "TEAM 2"
         '
-        'Label3
+        'Team3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(59, 415)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(179, 57)
-        Me.Label3.TabIndex = 21
-        Me.Label3.Text = "TEAM 3"
+        Me.Team3.AutoSize = True
+        Me.Team3.BackColor = System.Drawing.Color.Transparent
+        Me.Team3.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team3.ForeColor = System.Drawing.Color.White
+        Me.Team3.Location = New System.Drawing.Point(59, 415)
+        Me.Team3.Name = "Team3"
+        Me.Team3.Size = New System.Drawing.Size(179, 57)
+        Me.Team3.TabIndex = 21
+        Me.Team3.Text = "TEAM 3"
         '
-        'Label4
+        'Team4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(59, 532)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(179, 57)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "TEAM 4"
+        Me.Team4.AutoSize = True
+        Me.Team4.BackColor = System.Drawing.Color.Transparent
+        Me.Team4.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Team4.ForeColor = System.Drawing.Color.White
+        Me.Team4.Location = New System.Drawing.Point(59, 532)
+        Me.Team4.Name = "Team4"
+        Me.Team4.Size = New System.Drawing.Size(179, 57)
+        Me.Team4.TabIndex = 22
+        Me.Team4.Text = "TEAM 4"
         '
         'Team1Frame1
         '
@@ -2389,10 +2389,10 @@ Partial Class PlayingForm
         Me.Controls.Add(Me.Team1Frame1L)
         Me.Controls.Add(Me.Team1Frame1R)
         Me.Controls.Add(Me.Team1Frame1)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Team4)
+        Me.Controls.Add(Me.Team3)
+        Me.Controls.Add(Me.Team2)
+        Me.Controls.Add(Me.Team1)
         Me.Controls.Add(Me.Title)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "PlayingForm"
@@ -2406,10 +2406,10 @@ Partial Class PlayingForm
     End Sub
 
     Friend WithEvents Title As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents Team1 As Label
+    Friend WithEvents Team2 As Label
+    Friend WithEvents Team3 As Label
+    Friend WithEvents Team4 As Label
     Friend WithEvents Team1Frame1 As Label
     Friend WithEvents Team1Frame1R As Label
     Friend WithEvents Team1Frame1L As Label

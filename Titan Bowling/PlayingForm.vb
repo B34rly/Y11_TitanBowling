@@ -180,13 +180,57 @@ Public Class PlayingForm
             Next
         End Sub
     End Class
+    Private Sub InitTeamLabels(Team As String)
+        Me.Controls(Team).ForeColor = Color.White
+        Me.Controls(Team + "Label").Text = ""
+        Me.Controls(Team + "Total").BackColor = Color.White
+        Me.Controls(Team + "Total").Text = ""
 
+        For FrameNumber As Integer = 1 To 12
+            Dim Frame As String = "Frame" + FrameNumber.ToString
+            Me.Controls(Team + Frame).BackColor = Color.White
+            Me.Controls(Team + Frame).Text = ""
+            Me.Controls(Team + Frame + "L").BackColor = Color.LightGray
+            Me.Controls(Team + Frame + "L").Text = ""
+            Me.Controls(Team + Frame + "R").BackColor = Color.LightGray
+            Me.Controls(Team + Frame + "R").Text = ""
+            If FrameNumber = 12 Then
+                Me.Controls(Team + Frame + "D").BackColor = Color.LightGray
+                Me.Controls(Team + Frame + "D").Text = ""
+            End If
+        Next
+    End Sub
     Private Sub PlayingForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Game = New GameData
 
+        For TeamNumber As Integer = 1 To 4 'reset all labels
+            Dim Team As String = "Team" + TeamNumber.ToString
+            Me.Controls(Team).ForeColor = Color.Gray
+            Me.Controls(Team + "Label").Text = ""
+            Me.Controls(Team + "Total").BackColor = Color.Gray
+            Me.Controls(Team + "Total").Text = ""
+
+            For FrameNumber As Integer = 1 To 12
+                Dim Frame As String = "Frame" + FrameNumber.ToString
+                Me.Controls(Team + Frame).BackColor = Color.Gray
+                Me.Controls(Team + Frame).Text = ""
+                Me.Controls(Team + Frame + "L").BackColor = Color.DarkGray
+                Me.Controls(Team + Frame + "L").Text = ""
+                Me.Controls(Team + Frame + "R").BackColor = Color.DarkGray
+                Me.Controls(Team + Frame + "R").Text = ""
+                If FrameNumber = 12 Then
+                    Me.Controls(Team + Frame + "D").BackColor = Color.DarkGray
+                    Me.Controls(Team + Frame + "D").Text = ""
+                End If
+            Next
+        Next
+
         'make team names variable and get them from newgame form too.
         Dim Team1Names = NewGame.Team1Names
+
         If Team1Names(0) <> "" Then
+            InitTeamLabels("Team1")
+
             Dim Team1 As New TeamData("Team 1", 1, Team1Names(0), Team1Names(1), Team1Names(2), Team1Names(3))
             Team1Label.Text = Team1Names(0)
             For Member As Integer = 1 To (Team1.TeamMembers.Length - 1)
@@ -196,7 +240,10 @@ Public Class PlayingForm
         End If
 
         Dim Team2Names = NewGame.Team2Names
+
         If Team2Names(0) <> "" Then
+            InitTeamLabels("Team2")
+
             Dim Team2 As New TeamData("Team 2", 2, Team2Names(0), Team2Names(1), Team2Names(2), Team2Names(3))
             Team2Label.Text = Team2Names(0)
             For Member As Integer = 1 To (Team2.TeamMembers.Length - 1)
@@ -207,6 +254,8 @@ Public Class PlayingForm
 
         Dim Team3Names = NewGame.Team3Names
         If Team3Names(0) <> "" Then
+            InitTeamLabels("Team3")
+
             Dim Team3 As New TeamData("Team 3", 3, Team3Names(0), Team3Names(1), Team3Names(2), Team3Names(3))
             Team3Label.Text = Team3Names(0)
             For Member As Integer = 1 To (Team3.TeamMembers.Length - 1)
@@ -217,6 +266,8 @@ Public Class PlayingForm
 
         Dim Team4Names = NewGame.Team4Names
         If Team4Names(0) <> "" Then
+            InitTeamLabels("Team4")
+
             Dim Team4 As New TeamData("Team 4", 4, Team4Names(0), Team4Names(1), Team4Names(2), Team4Names(3))
             Team4Label.Text = Team4Names(0)
             For Member As Integer = 1 To (Team4.TeamMembers.Length - 1)
@@ -225,8 +276,6 @@ Public Class PlayingForm
             Game.AddTeam(Team4)
         End If
 
-        'I don't like repeating code like this, but it works and isn't that messy so its staying 
-        'Also what do we do with the scorecords of teams that don't exist? It looks bad having empty teams, but we can't hide them easily cause of how tehy're named lmao. Ideally we'd store all the labels in an array and iterate over that to show/hide them.
         Game.ResetFrames()
 
         Dim GameThread As New Thread(AddressOf GameLoop)
@@ -300,14 +349,14 @@ Public Class PlayingForm
 
                 Dim FrameScore As Integer() = Team.Scores(CurrentFrame)
                 Dim CurrentPlayer As String = Team.GetPlayer(CurrentFrame)
-                Dim CurrentTeam As Integer = Array.IndexOf(Game.Teams, Team)
+                Dim CurrentTeam As Integer = Team.TeamID
                 Dim PinsDowned As Integer
 
-                Dim currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}", CurrentTeam + 1, CurrentFrame + 1))
-                Dim currentFrameLabelL = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "L"))
-                Dim currentFrameLabelR = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "R"))
-                Dim currentFrameLabelD = If(CurrentFrame = 11, Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam + 1, CurrentFrame + 1, "D")), Nothing)
-                Dim teamTotalLabel = Me.Controls(String.Format("Team{0}Total", CurrentTeam + 1))
+                Dim currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}", CurrentTeam, CurrentFrame + 1))
+                Dim currentFrameLabelL = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam, CurrentFrame + 1, "L"))
+                Dim currentFrameLabelR = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam, CurrentFrame + 1, "R"))
+                Dim currentFrameLabelD = If(CurrentFrame = 11, Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam, CurrentFrame + 1, "D")), Nothing)
+                Dim teamTotalLabel = Me.Controls(String.Format("Team{0}Total", CurrentTeam))
 
 
                 If FrameScore(1) <> -1 Then
@@ -345,7 +394,7 @@ Public Class PlayingForm
                     Continue For
                 End If
 
-                PinsDowned = Await GetIntegerInput(String.Format("It's currently {0}'s turn! How many pins did they knock over? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), 10)
+                PinsDowned = Await GetIntegerInput(String.Format("It's currently {0}'s turn!" + vbCrLf + "How many pins did they knock over? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam).ToString, (CurrentFrame + 1).ToString), 10)
                 'Make sure it is within correct values (0-10 inclusive)
 
                 Debug.WriteLine(PinsDowned.ToString)
@@ -361,14 +410,14 @@ Public Class PlayingForm
                     If CurrentFrame = (Game.Frames - 1) Then 'strike in the last frame
                         currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = "X")
 
-                        PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a strike in the last frame, they get 2 more bonus rolls! How many pins did they knock over in the first roll? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), 10)
+                        PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a strike in the last frame, they get 2 more bonus rolls!" + vbCrLf + "How many pins did they knock over in the first roll? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam).ToString, (CurrentFrame + 1).ToString), 10)
                         FrameScore(2) = PinsDowned
 
                         currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = String.Format(If(FrameScore(2) = 10, "X", FrameScore(2))))
 
                         Dim PinsLeft As Integer = If(PinsDowned = 10, 10, 10 - PinsDowned)
 
-                        PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a strike in the last frame, they get 2 more bonus rolls! How many pins did they knock over in the second roll? (Must be a number from 0 to {1}.)", CurrentPlayer, PinsLeft), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), PinsLeft.ToString)
+                        PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a strike in the last frame, they get 2 more bonus rolls!" + vbCrLf + "How many pins did they knock over in the second roll? (Must be a number from 0 to {1}.)", CurrentPlayer, PinsLeft), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam).ToString, (CurrentFrame + 1).ToString), PinsLeft.ToString)
 
                         FrameScore(3) = PinsDowned
 
@@ -381,17 +430,16 @@ Public Class PlayingForm
                 Else
                     Dim PinsLeft As Integer = If(10 - PinsDowned = 0, 10, 10 - PinsDowned)
 
-                    PinsDowned = Await GetIntegerInput(String.Format("For a chance to spare, {0} can bowl a second time! How many pins did they knock over in the second roll? (Must be a number from 0 to {1}.)", CurrentPlayer, PinsLeft.ToString), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), PinsLeft)
+                    PinsDowned = Await GetIntegerInput(String.Format("For a chance to spare, {0} can bowl a second time!" + vbCrLf + "How many pins did they knock over in the second roll? (Must be a number from 0 to {1}.)", CurrentPlayer, PinsLeft.ToString), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam).ToString, (CurrentFrame + 1).ToString), PinsLeft)
                     FrameScore(2) = PinsDowned
 
                     currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = String.Format(FrameScore(2)))
 
                     If FrameScore(1) + FrameScore(2) = 10 Then
-                        MsgBox(String.Format("Congratulations on the spare, {0}!", CurrentPlayer), 1, "Spare!")
                         currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = "/")
 
                         If CurrentFrame = (Game.Frames - 1) Then
-                            PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a spare in the last frame, they get 1 bonus roll! How many pins did they knock over in this roll? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam + 1).ToString, (CurrentFrame + 1).ToString), 10)
+                            PinsDowned = Await GetIntegerInput(String.Format("Because {0} scored a spare in the last frame, they get 1 bonus roll!" + vbCrLf + "How many pins did they knock over in this roll? (Must be a number from 0 to 10.)", CurrentPlayer), String.Format("Input number of pins knocked over by {0} of Team {1} in Frame {2}", CurrentPlayer, (CurrentTeam).ToString, (CurrentFrame + 1).ToString), 10)
                             FrameScore(3) = PinsDowned
 
 

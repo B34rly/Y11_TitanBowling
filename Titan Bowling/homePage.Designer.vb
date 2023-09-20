@@ -22,193 +22,204 @@ Partial Class homePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Title = New Label()
-        PlayBttn = New Button()
-        BackgroundRing = New PictureBox()
-        Ringimg1 = New PictureBox()
-        PictureBox2 = New PictureBox()
-        PictureBox3 = New PictureBox()
-        SavedGames = New Button()
-        SETTINGS = New Button()
-        TUTORIAL = New Button()
-        SUPPORT = New Button()
-        CType(BackgroundRing, ComponentModel.ISupportInitialize).BeginInit()
-        CType(Ringimg1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' Title
-        ' 
-        Title.AutoSize = True
-        Title.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point)
-        Title.ForeColor = Color.White
-        Title.Location = New Point(235, 76)
-        Title.Name = "Title"
-        Title.Size = New Size(509, 81)
-        Title.TabIndex = 0
-        Title.Text = "TITAN BOWLING"
-        ' 
-        ' PlayBttn
-        ' 
-        PlayBttn.BackColor = Color.Transparent
-        PlayBttn.BackgroundImage = My.Resources.Resources.Button_Background
-        PlayBttn.BackgroundImageLayout = ImageLayout.Zoom
-        PlayBttn.FlatAppearance.BorderSize = 0
-        PlayBttn.FlatAppearance.MouseDownBackColor = Color.Transparent
-        PlayBttn.FlatAppearance.MouseOverBackColor = Color.Transparent
-        PlayBttn.FlatStyle = FlatStyle.Flat
-        PlayBttn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        PlayBttn.Location = New Point(404, 211)
-        PlayBttn.Name = "PlayBttn"
-        PlayBttn.Size = New Size(156, 60)
-        PlayBttn.TabIndex = 1
-        PlayBttn.Text = "PLAY"
-        PlayBttn.UseVisualStyleBackColor = False
-        ' 
-        ' BackgroundRing
-        ' 
-        BackgroundRing.BackColor = Color.Transparent
-        BackgroundRing.BackgroundImage = My.Resources.Resources.Ring
-        BackgroundRing.BackgroundImageLayout = ImageLayout.Zoom
-        BackgroundRing.Location = New Point(81, 232)
-        BackgroundRing.Name = "BackgroundRing"
-        BackgroundRing.Size = New Size(800, 415)
-        BackgroundRing.TabIndex = 2
-        BackgroundRing.TabStop = False
-        ' 
-        ' Ringimg1
-        ' 
-        Ringimg1.BackColor = Color.Transparent
-        Ringimg1.BackgroundImage = My.Resources.Resources.Shape_1
-        Ringimg1.BackgroundImageLayout = ImageLayout.Zoom
-        Ringimg1.ErrorImage = Nothing
-        Ringimg1.InitialImage = Nothing
-        Ringimg1.Location = New Point(-55, -27)
-        Ringimg1.Name = "Ringimg1"
-        Ringimg1.Size = New Size(212, 148)
-        Ringimg1.TabIndex = 3
-        Ringimg1.TabStop = False
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.BackColor = Color.Transparent
-        PictureBox2.BackgroundImage = My.Resources.Resources.Shape_2
-        PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox2.ErrorImage = Nothing
-        PictureBox2.InitialImage = Nothing
-        PictureBox2.Location = New Point(302, 311)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(359, 385)
-        PictureBox2.TabIndex = 5
-        PictureBox2.TabStop = False
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackColor = Color.Transparent
-        PictureBox3.BackgroundImage = My.Resources.Resources.Shape_3
-        PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox3.ErrorImage = Nothing
-        PictureBox3.InitialImage = Nothing
-        PictureBox3.Location = New Point(798, 64)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(311, 252)
-        PictureBox3.TabIndex = 6
-        PictureBox3.TabStop = False
-        ' 
-        ' SavedGames
-        ' 
-        SavedGames.BackColor = Color.Transparent
-        SavedGames.BackgroundImage = My.Resources.Resources.Button_Background
-        SavedGames.BackgroundImageLayout = ImageLayout.Zoom
-        SavedGames.FlatAppearance.BorderSize = 0
-        SavedGames.FlatAppearance.MouseDownBackColor = Color.Transparent
-        SavedGames.FlatAppearance.MouseOverBackColor = Color.Transparent
-        SavedGames.FlatStyle = FlatStyle.Flat
-        SavedGames.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        SavedGames.Location = New Point(588, 285)
-        SavedGames.Name = "SavedGames"
-        SavedGames.Size = New Size(156, 60)
-        SavedGames.TabIndex = 7
-        SavedGames.Text = "SAVED GAMES"
-        SavedGames.UseVisualStyleBackColor = False
-        ' 
-        ' SETTINGS
-        ' 
-        SETTINGS.BackColor = Color.Transparent
-        SETTINGS.BackgroundImage = My.Resources.Resources.Button_Background
-        SETTINGS.BackgroundImageLayout = ImageLayout.Zoom
-        SETTINGS.FlatAppearance.BorderSize = 0
-        SETTINGS.FlatAppearance.MouseDownBackColor = Color.Transparent
-        SETTINGS.FlatAppearance.MouseOverBackColor = Color.Transparent
-        SETTINGS.FlatStyle = FlatStyle.Flat
-        SETTINGS.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        SETTINGS.Location = New Point(666, 416)
-        SETTINGS.Name = "SETTINGS"
-        SETTINGS.Size = New Size(156, 60)
-        SETTINGS.TabIndex = 8
-        SETTINGS.Text = "SETTINGS"
-        SETTINGS.UseVisualStyleBackColor = False
-        ' 
-        ' TUTORIAL
-        ' 
-        TUTORIAL.BackColor = Color.Transparent
-        TUTORIAL.BackgroundImage = My.Resources.Resources.Button_Background
-        TUTORIAL.BackgroundImageLayout = ImageLayout.Zoom
-        TUTORIAL.FlatAppearance.BorderSize = 0
-        TUTORIAL.FlatAppearance.MouseDownBackColor = Color.Transparent
-        TUTORIAL.FlatAppearance.MouseOverBackColor = Color.Transparent
-        TUTORIAL.FlatStyle = FlatStyle.Flat
-        TUTORIAL.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        TUTORIAL.Location = New Point(219, 285)
-        TUTORIAL.Name = "TUTORIAL"
-        TUTORIAL.Size = New Size(156, 60)
-        TUTORIAL.TabIndex = 9
-        TUTORIAL.Text = "TUTORIAL"
-        TUTORIAL.UseVisualStyleBackColor = False
-        ' 
-        ' SUPPORT
-        ' 
-        SUPPORT.BackColor = Color.Transparent
-        SUPPORT.BackgroundImage = My.Resources.Resources.Button_Background
-        SUPPORT.BackgroundImageLayout = ImageLayout.Zoom
-        SUPPORT.FlatAppearance.BorderSize = 0
-        SUPPORT.FlatAppearance.MouseDownBackColor = Color.Transparent
-        SUPPORT.FlatAppearance.MouseOverBackColor = Color.Transparent
-        SUPPORT.FlatStyle = FlatStyle.Flat
-        SUPPORT.Font = New Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point)
-        SUPPORT.Location = New Point(139, 416)
-        SUPPORT.Name = "SUPPORT"
-        SUPPORT.Size = New Size(156, 60)
-        SUPPORT.TabIndex = 10
-        SUPPORT.Text = "SUPPORT"
-        SUPPORT.UseVisualStyleBackColor = False
-        ' 
-        ' homePage
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(1), CByte(32), CByte(76))
-        ClientSize = New Size(944, 501)
-        Controls.Add(SUPPORT)
-        Controls.Add(TUTORIAL)
-        Controls.Add(SETTINGS)
-        Controls.Add(SavedGames)
-        Controls.Add(PictureBox3)
-        Controls.Add(PictureBox2)
-        Controls.Add(Ringimg1)
-        Controls.Add(PlayBttn)
-        Controls.Add(Title)
-        Controls.Add(BackgroundRing)
-        Name = "homePage"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = " "
-        CType(BackgroundRing, ComponentModel.ISupportInitialize).EndInit()
-        CType(Ringimg1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Title = New System.Windows.Forms.Label()
+        Me.PlayBttn = New System.Windows.Forms.Button()
+        Me.BackgroundRing = New System.Windows.Forms.PictureBox()
+        Me.Ringimg1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.SavedGames = New System.Windows.Forms.Button()
+        Me.SETTINGS = New System.Windows.Forms.Button()
+        Me.TUTORIAL = New System.Windows.Forms.Button()
+        Me.SUPPORT = New System.Windows.Forms.Button()
+        CType(Me.BackgroundRing, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ringimg1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Title
+        '
+        Me.Title.AutoSize = True
+        Me.Title.Font = New System.Drawing.Font("Segoe UI", 45.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Title.ForeColor = System.Drawing.Color.White
+        Me.Title.Location = New System.Drawing.Point(269, 101)
+        Me.Title.Name = "Title"
+        Me.Title.Size = New System.Drawing.Size(636, 100)
+        Me.Title.TabIndex = 0
+        Me.Title.Text = "TITAN BOWLING"
+        '
+        'PlayBttn
+        '
+        Me.PlayBttn.BackColor = System.Drawing.Color.Transparent
+        Me.PlayBttn.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Button_Background
+        Me.PlayBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PlayBttn.FlatAppearance.BorderSize = 0
+        Me.PlayBttn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.PlayBttn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.PlayBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PlayBttn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.PlayBttn.Location = New System.Drawing.Point(462, 281)
+        Me.PlayBttn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PlayBttn.Name = "PlayBttn"
+        Me.PlayBttn.Size = New System.Drawing.Size(178, 80)
+        Me.PlayBttn.TabIndex = 1
+        Me.PlayBttn.Text = "PLAY"
+        Me.PlayBttn.UseVisualStyleBackColor = False
+        '
+        'BackgroundRing
+        '
+        Me.BackgroundRing.BackColor = System.Drawing.Color.Transparent
+        Me.BackgroundRing.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Ring
+        Me.BackgroundRing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BackgroundRing.Location = New System.Drawing.Point(93, 309)
+        Me.BackgroundRing.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.BackgroundRing.Name = "BackgroundRing"
+        Me.BackgroundRing.Size = New System.Drawing.Size(914, 553)
+        Me.BackgroundRing.TabIndex = 2
+        Me.BackgroundRing.TabStop = False
+        '
+        'Ringimg1
+        '
+        Me.Ringimg1.BackColor = System.Drawing.Color.Transparent
+        Me.Ringimg1.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Shape_1
+        Me.Ringimg1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Ringimg1.ErrorImage = Nothing
+        Me.Ringimg1.InitialImage = Nothing
+        Me.Ringimg1.Location = New System.Drawing.Point(-63, -36)
+        Me.Ringimg1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Ringimg1.Name = "Ringimg1"
+        Me.Ringimg1.Size = New System.Drawing.Size(242, 197)
+        Me.Ringimg1.TabIndex = 3
+        Me.Ringimg1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Shape_2
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.ErrorImage = Nothing
+        Me.PictureBox2.InitialImage = Nothing
+        Me.PictureBox2.Location = New System.Drawing.Point(345, 415)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(410, 513)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Shape_3
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox3.ErrorImage = Nothing
+        Me.PictureBox3.InitialImage = Nothing
+        Me.PictureBox3.Location = New System.Drawing.Point(912, 85)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(355, 336)
+        Me.PictureBox3.TabIndex = 6
+        Me.PictureBox3.TabStop = False
+        '
+        'SavedGames
+        '
+        Me.SavedGames.BackColor = System.Drawing.Color.Transparent
+        Me.SavedGames.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Button_Background
+        Me.SavedGames.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.SavedGames.FlatAppearance.BorderSize = 0
+        Me.SavedGames.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.SavedGames.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.SavedGames.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SavedGames.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.SavedGames.Location = New System.Drawing.Point(672, 380)
+        Me.SavedGames.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.SavedGames.Name = "SavedGames"
+        Me.SavedGames.Size = New System.Drawing.Size(178, 80)
+        Me.SavedGames.TabIndex = 7
+        Me.SavedGames.Text = "SAVED GAMES"
+        Me.SavedGames.UseVisualStyleBackColor = False
+        '
+        'SETTINGS
+        '
+        Me.SETTINGS.BackColor = System.Drawing.Color.Transparent
+        Me.SETTINGS.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Button_Background
+        Me.SETTINGS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.SETTINGS.FlatAppearance.BorderSize = 0
+        Me.SETTINGS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.SETTINGS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.SETTINGS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SETTINGS.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.SETTINGS.Location = New System.Drawing.Point(761, 555)
+        Me.SETTINGS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.SETTINGS.Name = "SETTINGS"
+        Me.SETTINGS.Size = New System.Drawing.Size(178, 80)
+        Me.SETTINGS.TabIndex = 8
+        Me.SETTINGS.Text = "SETTINGS"
+        Me.SETTINGS.UseVisualStyleBackColor = False
+        '
+        'TUTORIAL
+        '
+        Me.TUTORIAL.BackColor = System.Drawing.Color.Transparent
+        Me.TUTORIAL.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Button_Background
+        Me.TUTORIAL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.TUTORIAL.FlatAppearance.BorderSize = 0
+        Me.TUTORIAL.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.TUTORIAL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.TUTORIAL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TUTORIAL.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.TUTORIAL.Location = New System.Drawing.Point(250, 380)
+        Me.TUTORIAL.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TUTORIAL.Name = "TUTORIAL"
+        Me.TUTORIAL.Size = New System.Drawing.Size(178, 80)
+        Me.TUTORIAL.TabIndex = 9
+        Me.TUTORIAL.Text = "TUTORIAL"
+        Me.TUTORIAL.UseVisualStyleBackColor = False
+        '
+        'SUPPORT
+        '
+        Me.SUPPORT.BackColor = System.Drawing.Color.Transparent
+        Me.SUPPORT.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Button_Background
+        Me.SUPPORT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.SUPPORT.FlatAppearance.BorderSize = 0
+        Me.SUPPORT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.SUPPORT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.SUPPORT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SUPPORT.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.SUPPORT.Location = New System.Drawing.Point(159, 555)
+        Me.SUPPORT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.SUPPORT.Name = "SUPPORT"
+        Me.SUPPORT.Size = New System.Drawing.Size(178, 80)
+        Me.SUPPORT.TabIndex = 10
+        Me.SUPPORT.Text = "CREDITS"
+        Me.SUPPORT.UseVisualStyleBackColor = False
+        '
+        'homePage
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1079, 668)
+        Me.Controls.Add(Me.SUPPORT)
+        Me.Controls.Add(Me.TUTORIAL)
+        Me.Controls.Add(Me.SETTINGS)
+        Me.Controls.Add(Me.SavedGames)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Ringimg1)
+        Me.Controls.Add(Me.PlayBttn)
+        Me.Controls.Add(Me.Title)
+        Me.Controls.Add(Me.BackgroundRing)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Name = "homePage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = " "
+        CType(Me.BackgroundRing, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ringimg1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Title As Label

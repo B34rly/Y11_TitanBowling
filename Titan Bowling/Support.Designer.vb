@@ -22,92 +22,97 @@ Partial Class SupportForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(SupportForm))
-        Title = New Label()
-        PictureBox3 = New PictureBox()
-        Shape = New PictureBox()
-        Label1 = New Label()
-        HomeButton = New Button()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(Shape, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' Title
-        ' 
-        Title.AutoSize = True
-        Title.BackColor = Color.Transparent
-        Title.Font = New Font("Segoe UI", 55F, FontStyle.Bold, GraphicsUnit.Point)
-        Title.ForeColor = Color.White
-        Title.Location = New Point(101, 95)
-        Title.Name = "Title"
-        Title.Size = New Size(373, 99)
-        Title.TabIndex = 3
-        Title.Text = "SUPPORT"
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackColor = Color.Transparent
-        PictureBox3.BackgroundImage = My.Resources.Resources.Shape_3
-        PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox3.ErrorImage = Nothing
-        PictureBox3.InitialImage = Nothing
-        PictureBox3.Location = New Point(716, -23)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(311, 252)
-        PictureBox3.TabIndex = 11
-        PictureBox3.TabStop = False
-        ' 
-        ' Shape
-        ' 
-        Shape.BackgroundImage = My.Resources.Resources.square_shape
-        Shape.BackgroundImageLayout = ImageLayout.Zoom
-        Shape.Location = New Point(768, 336)
-        Shape.Name = "Shape"
-        Shape.Size = New Size(220, 242)
-        Shape.TabIndex = 12
-        Shape.TabStop = False
-        ' 
-        ' Label1
-        ' 
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(112, 194)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(574, 276)
-        Label1.TabIndex = 13
-        Label1.Text = resources.GetString("Label1.Text")
-        ' 
-        ' HomeButton
-        ' 
-        HomeButton.BackgroundImage = My.Resources.Resources.home
-        HomeButton.BackgroundImageLayout = ImageLayout.Zoom
-        HomeButton.FlatAppearance.BorderSize = 0
-        HomeButton.FlatStyle = FlatStyle.Flat
-        HomeButton.Location = New Point(12, 12)
-        HomeButton.Name = "HomeButton"
-        HomeButton.Size = New Size(35, 40)
-        HomeButton.TabIndex = 21
-        HomeButton.UseVisualStyleBackColor = True
-        ' 
-        ' SupportForm
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(1), CByte(32), CByte(76))
-        ClientSize = New Size(944, 501)
-        Controls.Add(HomeButton)
-        Controls.Add(Label1)
-        Controls.Add(Shape)
-        Controls.Add(PictureBox3)
-        Controls.Add(Title)
-        Name = "SupportForm"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "SupportForm"
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(Shape, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.Title = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Shape = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.HomeButton = New System.Windows.Forms.Button()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Shape, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Title
+        '
+        Me.Title.AutoSize = True
+        Me.Title.BackColor = System.Drawing.Color.Transparent
+        Me.Title.Font = New System.Drawing.Font("Segoe UI", 55.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Title.ForeColor = System.Drawing.Color.White
+        Me.Title.Location = New System.Drawing.Point(128, 182)
+        Me.Title.Name = "Title"
+        Me.Title.Size = New System.Drawing.Size(421, 123)
+        Me.Title.TabIndex = 3
+        Me.Title.Text = "CREDITS"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.Shape_3
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox3.ErrorImage = Nothing
+        Me.PictureBox3.InitialImage = Nothing
+        Me.PictureBox3.Location = New System.Drawing.Point(818, -31)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(355, 336)
+        Me.PictureBox3.TabIndex = 11
+        Me.PictureBox3.TabStop = False
+        '
+        'Shape
+        '
+        Me.Shape.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.square_shape
+        Me.Shape.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Shape.Location = New System.Drawing.Point(878, 448)
+        Me.Shape.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Shape.Name = "Shape"
+        Me.Shape.Size = New System.Drawing.Size(251, 323)
+        Me.Shape.TabIndex = 12
+        Me.Shape.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(128, 343)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(656, 284)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Titan Bowling is created by Tirth Patel and Aiden Naji of 11SDD5 as part of the y" &
+    "ear 11 major project. All resources used are licensed and used appropriately. "
+        '
+        'HomeButton
+        '
+        Me.HomeButton.BackgroundImage = Global.Titan_Bowling.My.Resources.Resources.home
+        Me.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.HomeButton.FlatAppearance.BorderSize = 0
+        Me.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HomeButton.Location = New System.Drawing.Point(14, 16)
+        Me.HomeButton.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.HomeButton.Name = "HomeButton"
+        Me.HomeButton.Size = New System.Drawing.Size(40, 53)
+        Me.HomeButton.TabIndex = 21
+        Me.HomeButton.UseVisualStyleBackColor = True
+        '
+        'SupportForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1079, 668)
+        Me.Controls.Add(Me.HomeButton)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Shape)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.Title)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Name = "SupportForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "SupportForm"
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Shape, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Title As Label
