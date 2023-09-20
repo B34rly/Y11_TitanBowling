@@ -22,7 +22,6 @@ Partial Class TutorialForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TutorialForm))
         Me.Shape = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Title = New System.Windows.Forms.Label()
@@ -91,7 +90,7 @@ Partial Class TutorialForm
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(656, 368)
         Me.Label1.TabIndex = 21
-        Me.Label1.Text = resources.GetString("Label1.Text")
+        Me.Label1.Text = "This game follows traditional bowling rules but with a 12 frame game."
         '
         'TutorialForm
         '

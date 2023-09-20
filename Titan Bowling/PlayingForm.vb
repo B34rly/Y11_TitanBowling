@@ -102,7 +102,7 @@ Public Class PlayingForm
                     Continue For
                 ElseIf Frame(1) = 10 Then
                     Frame(0) = 10 + nextTwoRolls(Frame)
-                ElseIf Frame(1) + Frame(2) = 10 Then
+                ElseIf (Frame(1) + Frame(2) = 10) Then
                     Frame(0) = 10 + NextRoll(Frame)
                 Else
                     Frame(0) = Frame(1) + Frame(2)
@@ -110,7 +110,7 @@ Public Class PlayingForm
 
                 Frame(0) += Total
 
-                If Array.IndexOf(Scores, Frame) = Scores.Length - 1 And Frame(1) <> 10 Then
+                If Array.IndexOf(Scores, Frame) = Scores.Length - 1 And Frame(1) <> 10 And Frame(3) <> -1 Then
                     Frame(0) += Frame(3)
                 End If
 
@@ -321,7 +321,7 @@ Public Class PlayingForm
 
     Private Sub EnterScore_Click(sender As Object, e As EventArgs) Handles EnterScore.Click
         AcceptInput = True
-        'Anything else requires a major rewrite. 
+        'This allows GetIntegerInput to accept and parse the inputted number 
     End Sub
 
     Private Async Sub GameLoop() ' Handles MyBase.Activated
@@ -476,24 +476,12 @@ Public Class PlayingForm
                 End Select
 
                 SavingSystem.Save(save, SavingSystem.CurrentActiveSave)
-                'to display scores it'd be a pain in the neck if our labels aren't ordered/sorted.
-                'it's easiest if they're stored in an array, but if they have a naming scheme too that'll work
-                'i saw u started with one then gave up because there were hundreds of labels lol
-                'did you make each label by hand or automate them like i showed u before?
             Next
         Next
 
-        For Each Team In Game.Teams
-            For i As Integer = 0 To Team.Scores.Length - 1
-                Dim Frame As Integer() = Team.Scores(i)
-                Debug.Write(String.Format("Frame: {0}", i))
-                For j As Integer = 0 To Frame.Length - 1
-                    Debug.Write(String.Format("Score {0}: {1} -- ", j, Frame(j)))
-                Next
-                Debug.WriteLine("")
-            Next
-        Next
-        Debug.WriteLine("Game finished!")
+        MsgBox("Game is over! No new scores can be inputted. Select a new save to begin a new game", 1, "Game Over!")
+        TurnLabel.Invoke(Sub() TurnLabel.Text = "Game over!")
+        PinsInput.Invoke(Sub() PinsInput.PlaceholderText = "")
         'Display final scores!
     End Sub
 
