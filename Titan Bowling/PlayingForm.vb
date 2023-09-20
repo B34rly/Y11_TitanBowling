@@ -24,7 +24,7 @@ Public Class PlayingForm
             If Name3 <> "" Then NumberOfTeamMembers += 1
             If Name4 <> "" Then NumberOfTeamMembers += 1
 
-            Select Case NumberOfTeamMembers
+            Select Case NumberOfTeamMembers 'safely initialises the string array holding each teammembers names
                 Case 1
                     TeamMembers = New String(0) {Name1}
                 Case 2
@@ -37,7 +37,7 @@ Public Class PlayingForm
 
         End Sub
 
-        Public Function nextTwoRolls(Frame() As Integer) As Integer
+        Public Function nextTwoRolls(Frame() As Integer) As Integer 'gets the number of pins knocked in the next 2 rolls from the current integer
             Dim FrameIndex As Integer = Array.IndexOf(Scores, Frame)
             Dim Points As Integer = 0
             If FrameIndex = (Scores.Length - 1) Then
@@ -70,7 +70,7 @@ Public Class PlayingForm
             Return Points
         End Function
 
-        Public Function NextRoll(Frame() As Integer)
+        Public Function NextRoll(Frame() As Integer) 'Gets the number of pins knocked in the next roll to the given frame
             Dim FrameIndex As Integer = Array.IndexOf(Scores, Frame)
             Dim Points As Integer = 0
             If FrameIndex = (Scores.Length - 1) Then
@@ -94,7 +94,7 @@ Public Class PlayingForm
             Return Points
         End Function
 
-        Public Sub CalculateScore()
+        Public Sub CalculateScore() 'calculates the scoreboard for the team
             Dim Total As Integer = 0
             For Each Frame() As Integer In Scores
                 If Frame(1) = -1 Then
@@ -180,7 +180,7 @@ Public Class PlayingForm
             Next
         End Sub
     End Class
-    Private Sub InitTeamLabels(Team As String)
+    Private Sub InitTeamLabels(Team As String) 'prepares all team labels for usage, setting them to the active colour scheme
         Me.Controls(Team).ForeColor = Color.White
         Me.Controls(Team + "Label").Text = ""
         Me.Controls(Team + "Total").BackColor = Color.White
@@ -203,7 +203,7 @@ Public Class PlayingForm
     Private Sub PlayingForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Game = New GameData
 
-        For TeamNumber As Integer = 1 To 4 'reset all labels
+        For TeamNumber As Integer = 1 To 4 'sets all labels to deactivated mode
             Dim Team As String = "Team" + TeamNumber.ToString
             Me.Controls(Team).ForeColor = Color.Gray
             Me.Controls(Team + "Label").Text = ""
@@ -279,11 +279,11 @@ Public Class PlayingForm
         Game.ResetFrames()
 
         Dim GameThread As New Thread(AddressOf GameLoop)
-        GameThread.Start()
+        GameThread.Start() 'creates a new thread for the gameloop. this allows for the game to run in a while loop without disrupting ui or being too resource intensive.
 
     End Sub
 
-    Private Async Function GetIntegerInput(Message As String, title As String, MaxValue As Integer) As Task(Of Integer)
+    Private Async Function GetIntegerInput(Message As String, title As String, MaxValue As Integer) As Task(Of Integer) 'gets input from the input textbox
         Dim Valid As Boolean = False
         Dim IntegerInput As Integer
         'Must be invoked, as this is being run on a separate worker thread.
@@ -324,20 +324,11 @@ Public Class PlayingForm
         'This allows GetIntegerInput to accept and parse the inputted number 
     End Sub
 
-    Private Async Sub GameLoop() ' Handles MyBase.Activated
-        'i reckon there's a better way to get inputs and make it more dynamic, but it'll need some redesign of the game screen
-        'we could also just design our own input form because the default one is ugly
-        '(i.e. create a new form and have it check the data, then close itself and return if data is valid)
-        'Rewrite this. Don't make it a loop as such, make it based on button input
+    Private Async Sub GameLoop()
         For CurrentFrame As Integer = 0 To (Game.Frames - 1) 'stores which frame game is in, starting from 0. 
             For Each Team In Game.Teams
-                'To Begin playing an already started game, just put everything here into an if statement. 
-                'Go through everything, skip onto next team/frame if the FrameScore(1) is equal to -1 (-1 is default value)
-
-                'Display a spare as a /, 0 pins as -, strike as X and if nothing was bowled yet (FrameScore(1) = -1) then make label text empty
-
-                'SINCE THIS IS RUN IN A SEPARATE THREAD, YOU CANNOT DIRECTLY ACCESS CONTROLS! USE INVOKE LIKE I DID IN GetIntegerInput()
-                For i As Integer = 0 To Team.Scores.Length - 1
+                'SINCE THIS IS RUN IN A SEPARATE THREAD, YOU CANNOT DIRECTLY ACCESS CONTROLS! they are invoked
+                For i As Integer = 0 To Team.Scores.Length - 1 'prints team scoreboard to debug
                     Dim Frame As Integer() = Team.Scores(i)
                     Debug.Write(String.Format("Frame: {0}", i))
                     For j As Integer = 0 To Frame.Length - 1
@@ -352,6 +343,7 @@ Public Class PlayingForm
                 Dim CurrentTeam As Integer = Team.TeamID
                 Dim PinsDowned As Integer
 
+                'initiates all the labels for the current frame
                 Dim currentFrameLabel = Me.Controls(String.Format("Team{0}Frame{1}", CurrentTeam, CurrentFrame + 1))
                 Dim currentFrameLabelL = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam, CurrentFrame + 1, "L"))
                 Dim currentFrameLabelR = Me.Controls(String.Format("Team{0}Frame{1}{2}", CurrentTeam, CurrentFrame + 1, "R"))
@@ -359,12 +351,12 @@ Public Class PlayingForm
                 Dim teamTotalLabel = Me.Controls(String.Format("Team{0}Total", CurrentTeam))
 
 
-                If FrameScore(1) <> -1 Then
+                If FrameScore(1) <> -1 Then 'goes through all filled frames. allows game to continue from previous save
                     'account for strikes and spares
                     If FrameScore(1) = 10 Then
                         currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = "")
                         currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = "X")
-                    ElseIf Framescore(1) + frameScore(2) = 10 Then
+                    ElseIf FrameScore(1) + FrameScore(2) = 10 Then
                         currentFrameLabelL.Invoke(Sub() currentFrameLabelL.Text = String.Format(FrameScore(1)))
                         currentFrameLabelR.Invoke(Sub() currentFrameLabelR.Text = "/")
                     Else
@@ -457,7 +449,7 @@ Public Class PlayingForm
                 Dim save = SavingSystem.Load(SavingSystem.CurrentActiveSave)
 
                 Dim oneDimensionalScores(36) As Integer
-                For Each Frame In Team.Scores
+                For Each Frame In Team.Scores 'for vb.net related reasons, it can only save 1d arrays. hence all 2d score arrays are translated into 1d and saved
                     For Each Score In Frame
                         oneDimensionalScores(Array.IndexOf(Team.Scores, Frame) * 3 + Array.IndexOf(Frame, Score)) = Score
                     Next
