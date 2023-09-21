@@ -61,6 +61,7 @@ Partial Class NewGame
         '
         'team1
         '
+        Me.team1.AutoEllipsis = True
         Me.team1.BackColor = System.Drawing.Color.White
         Me.team1.FlatAppearance.BorderSize = 0
         Me.team1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -75,6 +76,7 @@ Partial Class NewGame
         '
         'team2
         '
+        Me.team2.AutoEllipsis = True
         Me.team2.BackColor = System.Drawing.Color.White
         Me.team2.FlatAppearance.BorderSize = 0
         Me.team2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -89,6 +91,7 @@ Partial Class NewGame
         '
         'team3
         '
+        Me.team3.AutoEllipsis = True
         Me.team3.BackColor = System.Drawing.Color.White
         Me.team3.FlatAppearance.BorderSize = 0
         Me.team3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -103,6 +106,7 @@ Partial Class NewGame
         '
         'team4
         '
+        Me.team4.AutoEllipsis = True
         Me.team4.BackColor = System.Drawing.Color.White
         Me.team4.FlatAppearance.BorderSize = 0
         Me.team4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
