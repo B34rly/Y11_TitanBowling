@@ -20,6 +20,10 @@ Public Class homePage
             Hide()
         Else
             NewGame.Show()
+            NewGame.Team1Names = {"", "", "", ""}
+            NewGame.Team2Names = {"", "", "", ""}
+            NewGame.Team3Names = {"", "", "", ""}
+            NewGame.Team4Names = {"", "", "", ""}
             Hide()
         End If
 
